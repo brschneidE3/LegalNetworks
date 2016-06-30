@@ -1,0 +1,413 @@
+Abbrev,Name,Count,Jurisdiction,Citation Abbrev,Start Date,End Date,In Use,Last Modified
+scotus,Supreme Court of the United States,63691,Federal Appellate,SCOTUS,1789-09-24,Unknown,Yes,2014-10-30T18:59
+ca1,Court of Appeals for the First Circuit,30495,Federal Appellate,1st Cir.,1891-03-03,Unknown,Yes,2014-10-30T18:57
+ca2,Court of Appeals for the Second Circuit,47642,Federal Appellate,2d Cir.,1891-03-03,Unknown,Yes,2013-08-14T09:46
+ca3,Court of Appeals for the Third Circuit,48590,Federal Appellate,3rd Cir.,1891-03-03,Unknown,Yes,2014-10-30T18:57
+ca4,Court of Appeals for the Fourth Circuit,39388,Federal Appellate,4th Cir.,1891-03-03,Unknown,Yes,2014-10-30T18:58
+ca5,Court of Appeals for the Fifth Circuit,90347,Federal Appellate,5th Cir.,1891-03-03,Unknown,Yes,2014-10-30T18:58
+ca6,Court of Appeals for the Sixth Circuit,41632,Federal Appellate,6th Cir.,1891-03-03,Unknown,Yes,2014-11-07T13:21
+ca7,Court of Appeals for the Seventh Circuit,48388,Federal Appellate,7th Cir.,1891-03-03,Unknown,Yes,2014-10-30T18:58
+ca8,Court of Appeals for the Eighth Circuit,55782,Federal Appellate,8th Cir.,1891-03-03,Unknown,Yes,2014-10-30T18:58
+ca9,Court of Appeals for the Ninth Circuit,67646,Federal Appellate,9th Cir.,1891-03-03,Unknown,Yes,2014-10-30T18:58
+ca10,Court of Appeals for the Tenth Circuit,29694,Federal Appellate,10th Cir.,2/28/1929,Unknown,Yes,2013-08-14T09:46
+ca11,Court of Appeals for the Eleventh Circuit,46669,Federal Appellate,11th Cir.,10/14/1980,Unknown,Yes,2013-08-14T09:46
+cadc,Court of Appeals for the D.C. Circuit,23328,Federal Appellate,D.C. Cir.,1893-02-09,Unknown,Yes,2014-10-30T18:58
+cafc,Court of Appeals for the Federal Circuit,12391,Federal Appellate,Fed. Cir.,4/2/1982,Unknown,Yes,2014-10-30T18:59
+caca,Circuit Court for California,0,Federal Appellate,,1804-10-01,1812-04-30,Yes,2016-03-16T18:01
+afcca,United States Air Force Court of Criminal Appeals,179,Federal Special,A.F.C.C.A.,Unknown,Unknown,Yes,2014-09-18T18:41
+asbca,Armed Services Board of Contract Appeals,1039,Federal Special,A.S.B.C.A.,Unknown,Unknown,Yes,2014-09-18T18:15
+armfor,Court of Appeals for the Armed Forces,636,Federal Special,C.A.A.F.,5/31/1951,Unknown,Yes,2013-08-14T15:18
+acca,Army Court of Criminal Appeals,124,Federal Special,A.C.C.A.,Unknown,Unknown,Yes,2015-01-08T16:24
+cc,United States Court of Claims,930,Federal Special,Ct. Cl.,1855-02-24,10/29/1992,Yes,2013-10-17T17:47
+uscfc,United States Court of Federal Claims,2618,Federal Special,Fed. Cl.,4/2/1982,Unknown,Yes,2013-08-14T15:19
+com,Commerce Court,0,Federal Special,Comm. Ct.,1/1/1910,1/1/1913,Yes,2013-08-14T15:19
+ccpa,Court of Customs and Patent Appeals,2776,Federal Special,C.C.P.A.,8/5/1909,4/2/1982,Yes,2013-08-14T15:19
+cusc,United States Customs Court,161,Federal Special,Cust. Ct.,1/1/1926,1/1/1980,Yes,2014-06-18T17:34
+tax,United States Tax Court,639,Federal Special,Tax Ct.,Unknown,Unknown,Yes,2013-08-14T15:20
+mc,United States Court of Military Commission Review,7,Federal Special,M.C.,Unknown,Unknown,Yes,2014-11-24T09:05
+mspb,Merit Systems Protection Board,176,Federal Special,MSPB,Unknown,Unknown,Yes,2014-09-02T16:05
+nmcca,Navy-Marine Corps Court of Criminal Appeals,717,Federal Special,N.M.C.C.A.,Unknown,Unknown,Yes,2014-09-18T18:48
+cavc,United States Court of Appeals for Veterans Claims,865,Federal Special,Vet. App.,Unknown,Unknown,Yes,2013-08-14T15:20
+bva,Board of Veterans' Appeals,0,Federal Special,Board of Vet. App.,Unknown,Unknown,Yes,2014-09-18T18:06
+eca,Emergency Court of Appeals,97,Federal Special,Emer. Ct. App.,1/30/1942,4/18/1962,Yes,2013-08-14T15:20
+tecoa,Temporary Emergency Court of Appeals,0,Federal Special,Temp. Emerg. Ct. App.,12/1/1971,10/29/1992,Yes,2013-08-14T15:20
+fiscr,Foreign Intelligence Surveillance Court of Review,2,Federal Special,FISA Ct. Rev.,10/25/1978,Unknown,Yes,2014-05-27T08:58
+fisc,Foreign Intelligence Surveillance Court,5,Federal Special,FISA Ct.,10/25/1978,Unknown,Yes,2014-05-27T08:58
+reglrailreorgct,Special Court under the Regional Rail Reorganization Act,40,Federal Special,Regl. Rail Reorg. Act,1/1/1973,3/1/1996,Yes,2013-08-14T15:20
+cit,United States Court of International Trade,3960,Federal Special,Ct. Intl. Trade,Unknown,Unknown,Yes,2013-08-14T15:20
+bap1,Bankruptcy Appellate Panel of the First Circuit,283,Federal Bankruptcy Panel,1st Cir. BAP,Unknown,Unknown,Yes,2013-10-24T18:27
+bap2,Bankruptcy Appellate Panel of the Second Circuit,27,Federal Bankruptcy Panel,2d Cir. BAP,Unknown,Unknown,Yes,2013-10-24T18:28
+bap6,Bankruptcy Appellate Panel of the Sixth Circuit,254,Federal Bankruptcy Panel,6th Cir. BAP,Unknown,Unknown,Yes,2013-10-24T18:28
+bap8,United States Bankruptcy Appellate Panel for the Eighth Circuit,514,Federal Bankruptcy Panel,8th Cir. BAP,Unknown,Unknown,Yes,2013-10-24T18:28
+bap9,United States Bankruptcy Appellate Panel for the Ninth Circuit,1488,Federal Bankruptcy Panel,9th Cir. BAP,Unknown,Unknown,Yes,2013-10-24T18:28
+bap10,Bankruptcy Appellate Panel of the Tenth Circuit,401,Federal Bankruptcy Panel,10th Cir. BAP,Unknown,Unknown,Yes,2014-09-02T15:59
+bapme,Bankruptcy Appellate Panel D. Maine,2,Federal Bankruptcy Panel,Me. BAP,Unknown,Unknown,Yes,2013-10-24T18:28
+bapma,Bankruptcy Appellate Panel of Massachusetts,3,Federal Bankruptcy Panel,Mass. BAP,Unknown,Unknown,Yes,2013-10-24T18:28
+almb,United States Bankruptcy Court M.D. Alabama,180,Federal Bankruptcy,Bankr. M.D. Ala.,Unknown,Unknown,Yes,2013-08-14T16:55
+alnb,United States Bankruptcy Court N.D. Alabama,459,Federal Bankruptcy,Bankr. N.D. Ala.,Unknown,Unknown,Yes,2013-08-14T18:21
+alsb,United States Bankruptcy Court S.D. Alabama,114,Federal Bankruptcy,Bankr. S.D. Ala.,Unknown,Unknown,Yes,2013-08-15T09:44
+akb,United States Bankruptcy Court D. Alaska,51,Federal Bankruptcy,Bankr. D. Alaska,Unknown,Unknown,Yes,2013-08-14T17:32
+arb,United States Bankruptcy Court D. Arizona,355,Federal Bankruptcy,Bankr. D. Ariz.,Unknown,Unknown,Yes,2013-08-14T22:40
+areb,United States Bankruptcy Court E.D. Arkansas,520,Federal Bankruptcy,Bankr. E.D. Ark.,Unknown,Unknown,Yes,2013-08-14T22:23
+arwb,United States Bankruptcy Court W.D. Arkansas,241,Federal Bankruptcy,Bankr. W.D. Ark.,Unknown,Unknown,Yes,2013-08-14T18:00
+cacb,United States Bankruptcy Court C.D. California,568,Federal Bankruptcy,Bankr. C.D. Cal.,Unknown,Unknown,Yes,2013-08-14T17:19
+caeb,United States Bankruptcy Court E.D. California,274,Federal Bankruptcy,Bankr. E.D. Cal.,Unknown,Unknown,Yes,2013-08-14T18:03
+canb,United States Bankruptcy Court N.D. California,337,Federal Bankruptcy,Bankr. N.D. Cal.,Unknown,Unknown,Yes,2013-08-14T17:30
+casb,United States Bankruptcy Court S.D. California,348,Federal Bankruptcy,Bankr. S.D. Cal.,Unknown,Unknown,Yes,2013-08-14T17:30
+cob,United States Bankruptcy Court D. Colorado,744,Federal Bankruptcy,Bankr.D. Colo.,Unknown,Unknown,Yes,2013-08-14T17:23
+ctb,United States Bankruptcy Court D. Connecticut,822,Federal Bankruptcy,Bankr. D. Conn.,Unknown,Unknown,Yes,2013-08-14T17:24
+deb,United States Bankruptcy Court D. Delaware,873,Federal Bankruptcy,Bankr. D. Del.,Unknown,Unknown,Yes,2013-08-15T09:45
+dcb,United States Bankruptcy Court District of Columbia,1,Federal Bankruptcy,Bankr. D.C.,Unknown,Unknown,Yes,2013-08-14T17:00
+flmb,United States Bankruptcy Court M.D. Florida,2870,Federal Bankruptcy,Bankr. M.D. Fla.,Unknown,Unknown,Yes,2013-08-14T17:05
+flnb,United States Bankruptcy Court N.D. Florida,266,Federal Bankruptcy,Bankr. N.D. Fla.,Unknown,Unknown,Yes,2013-08-14T17:44
+flsb,United States Bankruptcy Court S.D. Florida.,1632,Federal Bankruptcy,Bankr. S.D. Florida,Unknown,Unknown,Yes,2013-08-14T16:54
+gamb,United States Bankruptcy Court M.D. Georgia,463,Federal Bankruptcy,Bankr. M.D. Ga.,Unknown,Unknown,Yes,2013-08-14T22:53
+ganb,United States Bankruptcy Court N.D. Georgia,812,Federal Bankruptcy,Bankr. N.D. Ga.,Unknown,Unknown,Yes,2013-08-14T17:41
+gasb,United States Bankruptcy Court S.D. Georgia,361,Federal Bankruptcy,Bankr. S.D. Ga.,Unknown,Unknown,Yes,2013-08-14T16:32
+hib,United States Bankruptcy Court D. Hawaii,163,Federal Bankruptcy,Bankr. D. Haw.,Unknown,Unknown,Yes,2013-08-15T09:30
+idb,United States Bankruptcy Court D. Idaho,430,Federal Bankruptcy,Bankr. D. Idaho,Unknown,Unknown,Yes,2013-08-14T18:15
+ilcb,United States Bankruptcy Court C.D. Illinois,428,Federal Bankruptcy,Bankr. C.D. Ill.,Unknown,Unknown,Yes,2014-11-24T09:04
+ilnb,United States Bankruptcy Court N.D. Illinois,1917,Federal Bankruptcy,Bankr. N.D. Ill.,Unknown,Unknown,Yes,2014-11-24T09:04
+ilsb,United States Bankruptcy Court S.D. Illinois,220,Federal Bankruptcy,Bankr. S.D. Ill.,Unknown,Unknown,Yes,2013-08-15T09:06
+innb,United States Bankruptcy Court N.D. Indiana,366,Federal Bankruptcy,Bankr. N.D. Ind.,Unknown,Unknown,Yes,2013-08-15T09:34
+insb,United States Bankruptcy Court S.D. Indiana,170,Federal Bankruptcy,Bankr. S.D. Ind.,Unknown,Unknown,Yes,2013-08-15T09:19
+ianb,United States Bankruptcy Court N.D. Iowa,397,Federal Bankruptcy,Bankr. D. Iowa,Unknown,Unknown,Yes,2013-08-14T17:37
+iasb,United States Bankruptcy Court S.D. Iowa,138,Federal Bankruptcy,Bankr. S.D. Iowa,Unknown,Unknown,Yes,2013-08-14T18:01
+ksb,United States Bankruptcy Court D. Kansas,624,Federal Bankruptcy,Bankr. D. Kan.,Unknown,Unknown,Yes,2013-08-14T16:43
+kyeb,United States Bankruptcy Court E.D. Kentucky,116,Federal Bankruptcy,Bankr. E.D. Ky.,Unknown,Unknown,Yes,2013-08-15T10:03
+kywb,United States Bankruptcy Court W.D. Kentucky,511,Federal Bankruptcy,Bankr. W.D. Ky.,Unknown,Unknown,Yes,2013-08-15T09:23
+laeb,United States Bankruptcy Court E.D. Louisiana,102,Federal Bankruptcy,Bankr. E.D. La.,Unknown,Unknown,Yes,2013-08-14T22:54
+lamb,United States Bankruptcy Court M.D. Louisiana,109,Federal Bankruptcy,Bankr. M.D. La.,Unknown,Unknown,Yes,2013-08-14T22:37
+lawb,United States Bankruptcy Court W.D. Louisiana,188,Federal Bankruptcy,Bankr. W.D. La.,Unknown,Unknown,Yes,2013-08-15T09:01
+meb,United States Bankruptcy Court D. Maine,319,Federal Bankruptcy,Bankr. D. Me.,Unknown,Unknown,Yes,2014-11-24T09:05
+mdb,United States Bankruptcy Court D. Maryland,505,Federal Bankruptcy,Bankr. D. Md.,Unknown,Unknown,Yes,2013-08-14T18:06
+mab,United States Bankruptcy Court D. Massachusetts,1502,Federal Bankruptcy,Bankr. D. Mass.,Unknown,Unknown,Yes,2013-08-14T16:41
+mieb,United States Bankruptcy Court E.D. Michigan,745,Federal Bankruptcy,Bankr. E.D. Mich.,Unknown,Unknown,Yes,2013-08-14T18:10
+miwb,United States Bankruptcy Court W.D. Michigan,404,Federal Bankruptcy,Bankr. W.D. Mich.,Unknown,Unknown,Yes,2013-08-14T17:48
+mnb,United States Bankruptcy Court D. Minnesota,688,Federal Bankruptcy,Bankr. D. Minn.,Unknown,Unknown,Yes,2013-08-14T17:13
+msnb,United States Bankruptcy Court N.D. Mississippi,172,Federal Bankruptcy,Bankr. N.D. Miss.,Unknown,Unknown,Yes,2013-08-15T09:22
+mssb,United States Bankruptcy Court S.D. Mississippi,98,Federal Bankruptcy,Bankr. S.D. Miss.,Unknown,Unknown,Yes,2013-08-15T09:05
+moeb,United States Bankruptcy Court E.D. Missouri,545,Federal Bankruptcy,Bankr. E.D. Mo.,Unknown,Unknown,Yes,2013-08-14T18:05
+mowb,United States Bankruptcy Court W.D. Missouri,1133,Federal Bankruptcy,Bankr. W.D. Mo.,Unknown,Unknown,Yes,2013-08-14T17:06
+mtb,United States Bankruptcy Court D. Montana,310,Federal Bankruptcy,Bankr. D. Mont.,Unknown,Unknown,Yes,2013-08-14T18:04
+nebraskab,United States Bankruptcy Court D. Nebraska,333,Federal Bankruptcy,Bankr. D. Neb.,Unknown,Unknown,Yes,2013-08-14T22:49
+nvb,United States Bankruptcy Court D. Nevada,198,Federal Bankruptcy,Bankr. D. Nev.,Unknown,Unknown,Yes,2013-08-14T18:16
+nhb,United States Bankruptcy Court D. New Hampshire,408,Federal Bankruptcy,Bankr. D.N.H.,Unknown,Unknown,Yes,2013-08-14T17:07
+njb,United States Bankruptcy Court D. New Jersey,635,Federal Bankruptcy,Bankr. D.N.J.,Unknown,Unknown,Yes,2013-08-14T17:15
+nmb,United States Bankruptcy Court D. New Mexico,312,Federal Bankruptcy,Bankr. D.N.M.,Unknown,Unknown,Yes,2013-08-14T17:14
+nyeb,United States Bankruptcy Court E.D. New York,1063,Federal Bankruptcy,Bankr. E.D.N.Y.,Unknown,Unknown,Yes,2013-08-14T16:38
+nynb,United States Bankruptcy Court N.D. New York,355,Federal Bankruptcy,Bankr. N.D.N.Y.,Unknown,Unknown,Yes,2013-08-14T22:26
+nysb,United States Bankruptcy Court S.D. New York,2457,Federal Bankruptcy,Bankr. S.D.N.Y.,Unknown,Unknown,Yes,2013-08-14T16:39
+nywb,United States Bankruptcy Court W.D. New York,542,Federal Bankruptcy,Bankr. W.D.N.Y.,Unknown,Unknown,Yes,2013-08-14T17:26
+nceb,United States Bankruptcy Court E.D. North Carolina,245,Federal Bankruptcy,Bankr. E.D.N.C.,Unknown,Unknown,Yes,2013-08-15T09:17
+ncmb,United States Bankruptcy Court M.D. North Carolina,191,Federal Bankruptcy,Bankr. M.D.N.C.,Unknown,Unknown,Yes,2013-08-14T17:10
+ncwb,United States Bankruptcy Court W.D. North Carolina,84,Federal Bankruptcy,Bankr. W.D.N.C.,Unknown,Unknown,Yes,2013-08-15T09:47
+ndb,United States Bankruptcy Court D. North Dakota,297,Federal Bankruptcy,Bankr. D.N.D.,Unknown,Unknown,Yes,2014-11-24T09:06
+ohnb,United States Bankruptcy Court N.D. Ohio,1780,Federal Bankruptcy,Bankr. N.D. Ohio,Unknown,Unknown,Yes,2013-08-14T17:20
+ohsb,United States Bankruptcy Court S.D. Ohio,1631,Federal Bankruptcy,Bankr. S.D. Ohio,Unknown,Unknown,Yes,2013-08-14T17:43
+okeb,United States Bankruptcy Court E.D. Oklahoma,98,Federal Bankruptcy,Bankr. E.D. Okla.,Unknown,Unknown,Yes,2013-08-15T09:53
+oknb,United States Bankruptcy Court N.D. Oklahoma,288,Federal Bankruptcy,Bankr. N.D. Okla,Unknown,Unknown,Yes,2013-08-14T18:12
+okwb,United States Bankruptcy Court W.D. Oklahoma,268,Federal Bankruptcy,Bankr. W.D. Okla.,Unknown,Unknown,Yes,2013-08-14T22:18
+orb,United States Bankruptcy Court D. Oregon,384,Federal Bankruptcy,Bankr. D. Or.,Unknown,Unknown,Yes,2013-08-14T18:13
+paeb,United States Bankruptcy Court E.D. Pennsylvania,2094,Federal Bankruptcy,Bankr. E.D. Pa.,Unknown,Unknown,Yes,2013-08-14T17:25
+pamb,United States Bankruptcy Court M.D. Pennsylvania,427,Federal Bankruptcy,Bankr. M.D. Penn.,Unknown,Unknown,Yes,2013-08-14T17:40
+pawb,United States Bankruptcy Court W.D. Pennsylvania,1057,Federal Bankruptcy,Bankr. W.D. Pa.,Unknown,Unknown,Yes,2013-08-14T17:11
+rib,United States Bankruptcy Court D. Rhode Island,448,Federal Bankruptcy,Bankr. D.R.I.,Unknown,Unknown,Yes,2013-08-15T09:38
+scb,United States Bankruptcy Court D. South Carolina,417,Federal Bankruptcy,Bankr. D.S.C.,Unknown,Unknown,Yes,2014-11-24T09:49
+sdb,United States Bankruptcy Court D. South Dakota,206,Federal Bankruptcy,Bankr. D.S.D.,Unknown,Unknown,Yes,2013-08-15T09:33
+tneb,United States Bankruptcy Court E.D. Tennessee,663,Federal Bankruptcy,Bankr. E.D. Tenn.,Unknown,Unknown,Yes,2013-08-14T18:07
+tnmb,United States Bankruptcy Court M.D. Tennessee,388,Federal Bankruptcy,Bankr. M.D. Tenn.,Unknown,Unknown,Yes,2013-08-14T22:51
+tnwb,United States Bankruptcy Court W.D. Tennessee,264,Federal Bankruptcy,Bankr. W.D. Tenn.,Unknown,Unknown,Yes,2013-08-14T22:47
+tennesseeb,United States Bankruptcy Court D. Tennessee,12,Federal Bankruptcy,Bankr. D. Tenn.,Unknown,Unknown,Yes,2013-09-07T14:56
+txeb,United States Bankruptcy Court E.D. Texas,245,Federal Bankruptcy,Bankr. E.D. Tex.,Unknown,Unknown,Yes,2013-08-14T17:28
+txnb,United States Bankruptcy Court N.D. Texas,848,Federal Bankruptcy,Bankr. N.D. Tex.,Unknown,Unknown,Yes,2013-08-14T22:25
+txsb,United States Bankruptcy Court S.D. Texas,565,Federal Bankruptcy,Bankr. S.D. Tex.,Unknown,Unknown,Yes,2013-08-14T22:42
+txwb,United States District Court W.D. Texas,435,Federal Bankruptcy,Bankr. W.D. Tex.,Unknown,Unknown,Yes,2013-08-14T17:38
+utb,United States Bankruptcy Court D. Utah,221,Federal Bankruptcy,Bankr. D. Utah,Unknown,Unknown,Yes,2013-08-14T22:45
+vtb,United States Bankruptcy Court D. Vermont,343,Federal Bankruptcy,Bankr. D. Vt.,Unknown,Unknown,Yes,2013-08-14T22:43
+vaeb,United States Bankruptcy Court E.D. Virginia,1113,Federal Bankruptcy,Bankr. E.D. Va.,Unknown,Unknown,Yes,2013-08-14T17:50
+vawb,United States Bankruptcy Court W.D. Virginia,416,Federal Bankruptcy,Bankr. W.D. Va.,Unknown,Unknown,Yes,2013-08-14T17:29
+waeb,United States Bankruptcy Court E.D. Washington,53,Federal Bankruptcy,Bankr. E.D. Wash.,Unknown,Unknown,Yes,2013-08-15T09:52
+wawb,United States Bankruptcy Court W.D. Washington,148,Federal Bankruptcy,Bankr. W.D. Wash.,Unknown,Unknown,Yes,2013-08-15T09:32
+wvnb,United States District Court N.D. West Virginia,82,Federal Bankruptcy,Bankr. N.D.W. Va.,Unknown,Unknown,Yes,2013-08-14T17:16
+wvsb,United States Bankruptcy Court S.D. West Virginia,41,Federal Bankruptcy,Bankr. S.D.W. Va.,Unknown,Unknown,Yes,2013-08-15T10:08
+wieb,United States Bankruptcy Court E.D. Wisconsin,388,Federal Bankruptcy,Bankr. E.D. Wis.,Unknown,Unknown,Yes,2013-08-14T16:59
+wiwb,United States Bankruptcy Court W.D. Wisconsin,364,Federal Bankruptcy,Bankr. W.D. Wis.,Unknown,Unknown,Yes,2013-08-14T22:27
+wyb,United States Bankruptcy Court D. Wyoming,39,Federal Bankruptcy,Bankr. D. Wyo.,Unknown,Unknown,Yes,2013-08-15T10:09
+gub,United States Bankruptcy Court D. Guam,2,Federal Bankruptcy,Bankr. D. Guam,Unknown,Unknown,Yes,2013-08-15T11:08
+nmib,United States Bankruptcy Court Northern Mariana Islands,0,Federal Bankruptcy,Bankr. N. Mar. I.,Unknown,Unknown,Yes,2013-09-07T14:24
+prb,United States Bankruptcy Court D. Puerto Rico,152,Federal Bankruptcy,Bankr. D.P.R.,Unknown,Unknown,Yes,2013-08-15T11:07
+vib,United States Bankruptcy Court D. Virgin Islands,5,Federal Bankruptcy,Bankr. D.V.I.,Unknown,Unknown,Yes,2013-08-15T10:29
+dcd,District Court District of Columbia,26381,Federal District,D.C.,Unknown,Unknown,Yes,2014-05-19T17:58
+ald,District Court D. Alabama,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+almd,District Court M.D. Alabama,2266,Federal District,M.D. Ala.,Unknown,Unknown,Yes,2013-08-14T15:23
+alnd,District Court N.D. Alabama,1247,Federal District,N.D. Ala.,Unknown,Unknown,Yes,2013-08-14T22:35
+alsd,District Court S.D. Alabama,724,Federal District,S.D. Ala.,Unknown,Unknown,Yes,2013-10-22T08:47
+akd,District Court D. Alaska,444,Federal District,D. Alaska,Unknown,Unknown,Yes,2013-08-15T10:49
+azd,District Court D. Arizona,1286,Federal District,D. Ariz.,Unknown,Unknown,Yes,2013-08-14T15:23
+ared,District Court E.D. Arkansas,1190,Federal District,E.D. Ark.,Unknown,Unknown,Yes,2013-08-14T15:23
+arwd,District Court W.D. Arkansas,810,Federal District,W.D. Ark.,Unknown,Unknown,Yes,2013-10-22T08:48
+californiad,District Court D. California,8,Federal District,D. Cal.,1866-07-27,1886-08-05,Yes,2013-08-14T15:23
+cacd,District Court C.D. California,3246,Federal District,C.D. Cal.,Unknown,Unknown,Yes,2013-08-19T17:00
+caed,District Court E.D. California,1258,Federal District,E.D. Cal.,Unknown,Unknown,Yes,2014-06-13T11:53
+cand,District Court N.D. California,4669,Federal District,N.D. Cal.,Unknown,Unknown,Yes,2013-08-14T15:23
+casd,District Court S.D. California,1725,Federal District,S.D. Cal.,Unknown,Unknown,Yes,2013-08-14T15:23
+cod,District Court D. Colorado,3237,Federal District,D. Colo.,Unknown,Unknown,Yes,2013-08-14T15:23
+ctd,District Court D. Connecticut,4495,Federal District,D. Conn.,Unknown,Unknown,Yes,2013-08-14T15:23
+ded,District Court D. Delaware,3748,Federal District,D. Del.,Unknown,Unknown,Yes,2013-08-14T15:23
+fld,District Court D. Florida,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+flmd,District Court M.D. Florida,2998,Federal District,M.D. Fla.,Unknown,Unknown,Yes,2013-08-15T09:43
+flnd,District Court N.D. Florida,536,Federal District,N.D. Fla.,Unknown,Unknown,Yes,2013-08-15T09:43
+flsd,District Court S.D. Florida,4193,Federal District,S.D. Fla.,Unknown,Unknown,Yes,2013-08-14T15:23
+gad,District Court D. Georgia,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+gamd,District Court M.D. Georgia,837,Federal District,,Unknown,Unknown,Yes,2013-08-14T15:23
+gand,District Court N.D. Georgia,2814,Federal District,N.D. Ga.,Unknown,Unknown,Yes,2013-08-14T15:23
+gasd,District Court S.D. Georgia,771,Federal District,S.D. Ga.,Unknown,Unknown,Yes,2013-10-22T08:48
+hid,District Court D. Hawaii,1321,Federal District,D. Haw.,Unknown,Unknown,Yes,2013-08-15T09:58
+idd,District Court D. Idaho,430,Federal District,D. Idaho,Unknown,Unknown,Yes,2013-08-14T15:23
+ilcd,District Court C.D. Illinois,1029,Federal District,C.D. Ill.,Unknown,Unknown,Yes,2013-08-14T22:33
+ilnd,District Court N.D. Illinois,12460,Federal District,N.D. Ill.,Unknown,Unknown,Yes,2013-08-14T15:23
+ilsd,District Court S.D. Illinois,505,Federal District,S.D. Ill.,Unknown,Unknown,Yes,2013-08-14T15:23
+illinoised,District Court E.D. Illinois,184,Federal District,E.D. Ill.,3/3/1905,10/2/1978,Yes,2013-10-22T08:49
+illinoisd,District Court D. Illinois,1,Federal District,D. Ill.,1819-03-03,1855-02-13,Yes,2013-09-07T15:00
+innd,District Court N.D. Indiana,1829,Federal District,N.D. Ind.,Unknown,Unknown,Yes,2013-08-19T17:50
+insd,District Court S.D. Indiana,1387,Federal District,S.D. Ind.,Unknown,Unknown,Yes,2013-08-19T17:51
+indianad,District Court D. Indiana,3,Federal District,D. Ind.,1817-03-03,4/21/1928,Yes,2013-08-14T15:23
+iad,District Court D. Iowa,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+iand,District Court N.D. Iowa,1230,Federal District,N.D. Iowa,Unknown,Unknown,Yes,2013-08-14T15:23
+iasd,District Court S.D. Iowa,1165,Federal District,S.D. Iowa,Unknown,Unknown,Yes,2013-10-22T08:49
+ksd,District Court D. Kansas,4748,Federal District,,Unknown,Unknown,Yes,2013-08-14T15:23
+kyd,District Court D. Kentucky,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+kyed,District Court E.D. Kentucky,863,Federal District,E.D. Ky.,Unknown,Unknown,Yes,2013-10-22T08:49
+kywd,District Court W.D. Kentucky,1011,Federal District,W.D. Ky.,Unknown,Unknown,Yes,2013-08-14T15:23
+lad,District Court D. Louisiana,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+laed,District Court E.D. Louisiana.,2763,Federal District,E.D. La.,Unknown,Unknown,Yes,2013-08-14T15:23
+lamd,District Court M.D. Louisiana,706,Federal District,M.D. La.,Unknown,Unknown,Yes,2013-08-15T10:47
+lawd,District Court W.D. Louisiana,1223,Federal District,W.D. La.,Unknown,Unknown,Yes,2013-08-14T15:23
+orld,District Court Orleans,0,Federal District,,1804-10-01,1812-04-08,Yes,2016-03-16T18:01
+med,District Court D. Maine,2505,Federal District,D. Me.,Unknown,Unknown,Yes,2013-08-14T15:23
+mdd,District Court D. Maryland,5001,Federal District,D. Maryland,Unknown,Unknown,Yes,2013-08-14T15:23
+mad,District Court D. Massachusetts,7532,Federal District,D. Mass.,Unknown,Unknown,Yes,2013-08-14T15:23
+michd,District Court D. Michigan,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+mied,District Court E.D. Michigan,5436,Federal District,E.D. Mich.,Unknown,Unknown,Yes,2013-08-14T15:23
+miwd,District Court W.D. Michigan,1696,Federal District,,Unknown,Unknown,Yes,2013-10-22T08:50
+mnd,District Court D. Minnesota,3249,Federal District,D. Minnesota,Unknown,Unknown,Yes,2013-08-14T15:23
+missd,District Court D. Mississippi,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+msnd,District Court N.D. Mississippi,942,Federal District,N.D. Miss.,Unknown,Unknown,Yes,2013-08-14T15:23
+mssd,District Court S.D. Mississippi,1696,Federal District,S.D. Miss.,Unknown,Unknown,Yes,2013-10-22T08:50
+mod,District Court D. Missouri,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+mocd,District Court C.D. Missouri,2,Federal District,C.D. Mo.,Unknown,Unknown,Yes,2013-10-22T08:51
+moed,District Court E.D. Missouri,2631,Federal District,E.D. Mo.,Unknown,Unknown,Yes,2013-10-22T08:53
+mowd,District Court W.D. Missouri,1954,Federal District,W.D. Mo.,Unknown,Unknown,Yes,2013-08-14T15:23
+mosd,District Court S.D. Missouri,2,Federal District,Mo. S.D.,Unknown,Unknown,Yes,2013-10-30T00:51
+mtd,District Court D. Montana,816,Federal District,D. Mont.,Unknown,Unknown,Yes,2013-08-14T15:23
+ned,District Court D. Nebraska,1165,Federal District,D. Neb.,Unknown,Unknown,Yes,2013-08-14T15:23
+nvd,District Court D. Nevada,1221,Federal District,D. Nev.,Unknown,Unknown,Yes,2013-08-14T15:23
+nhd,District Court D. New Hampshire,912,Federal District,D.N.H.,Unknown,Unknown,Yes,2013-08-14T15:23
+njd,District Court D. New Jersey,4865,Federal District,D.N.J.,Unknown,Unknown,Yes,2013-08-14T15:23
+nmd,District Court D. New Mexico,1084,Federal District,D.N.M.,Unknown,Unknown,Yes,2013-08-14T15:23
+nyd,District Court D. New York,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+nyed,District Court E.D. New York,7792,Federal District,E.D.N.Y,Unknown,Unknown,Yes,2013-08-14T15:23
+nynd,District Court N.D. New York,2578,Federal District,,Unknown,Unknown,Yes,2013-10-22T08:53
+nysd,District Court S.D. New York,26704,Federal District,S.D.N.Y.,Unknown,Unknown,Yes,2013-10-22T08:54
+nywd,District Court W.D. New York,2924,Federal District,W.D.N.Y.,Unknown,Unknown,Yes,2013-08-14T15:23
+nced,District Court E.D. North Carolina,1076,Federal District,E.D.N.C.,Unknown,Unknown,Yes,2013-08-14T15:23
+ncmd,District Court M.D. North Carolina,1083,Federal District,M.D.N.C.,Unknown,Unknown,Yes,2013-08-15T09:24
+ncwd,District Court W.D. North Carolina,1061,Federal District,W.D.N.C.,Unknown,Unknown,Yes,2013-10-22T08:54
+ndd,District Court D. North Dakota,606,Federal District,D.N.D.,Unknown,Unknown,Yes,2013-08-15T09:04
+ncd,District Court D. North Carolina,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+ohnd,District Court N.D. Ohio,3293,Federal District,N.D. Ohio,Unknown,Unknown,Yes,2013-08-14T15:23
+ohsd,District Court S.D. Ohio,2860,Federal District,S.D. Ohio,Unknown,Unknown,Yes,2013-08-14T15:23
+ohiod,District Court D. Ohio,3,Federal District,D. Ohio,1803-02-19,1855-02-10,Yes,2013-08-14T15:23
+oked,District Court E.D. Oklahoma,174,Federal District,E.D. Okla.,Unknown,Unknown,Yes,2013-10-22T08:54
+oknd,District Court N.D. Oklahoma,485,Federal District,N.D. Okla.,Unknown,Unknown,Yes,2013-08-14T15:23
+okwd,District Court W.D. Oklahoma,1010,Federal District,W.D. Okla.,Unknown,Unknown,Yes,2013-08-14T15:23
+ord,District Court D. Oregon,1859,Federal District,D. Or.,Unknown,Unknown,Yes,2013-08-14T15:23
+paed,District Court E.D. Pennsylvania,10440,Federal District,E.D. Pa.,Unknown,Unknown,Yes,2013-08-14T15:23
+pamd,District Court M.D. Pennsylvania,2303,Federal District,M.D. Penn.,Unknown,Unknown,Yes,2013-10-22T08:25
+pawd,District Court W.D. Pennsylvania,3244,Federal District,W.D. Pa.,Unknown,Unknown,Yes,2013-08-14T15:23
+pennsylvaniad,District Court D. Pennsylvania,8,Federal District,D. Pa.,Unknown,Unknown,Yes,2013-08-19T18:25
+rid,District Court D. Rhode Island,1556,Federal District,D.R.I.,Unknown,Unknown,Yes,2013-08-14T15:23
+scd,United States District Court D. South Carolina,1473,Federal District,D.S.C.,Unknown,Unknown,Yes,2013-08-15T10:25
+southcarolinaed,District Court E.D. South Carolina,181,Federal District,E.D.S.C.,1823-02-21,10/7/1965,Yes,2013-08-14T15:23
+southcarolinawd,District Court W.D. South Carolina,95,Federal District,W.D.S.C.,1823-02-21,10/7/1965,Yes,2013-10-22T08:55
+sdd,District Court D. South Dakota,867,Federal District,D.S.D.,Unknown,Unknown,Yes,2013-08-14T15:23
+tned,District Court E.D. Tennessee,1363,Federal District,E.D. Tenn.,Unknown,Unknown,Yes,2013-10-22T08:55
+tnmd,District Court M.D. Tennessee,1147,Federal District,M.D. Tenn.,Unknown,Unknown,Yes,2013-10-22T08:25
+tnwd,District Court W.D. Tennessee,892,Federal District,W.D. Tenn.,Unknown,Unknown,Yes,2013-10-22T08:56
+tennessed,District Court D. Tennessee,3,Federal District,D. Tenn.,1797-01-31,1839-06-18,Yes,2013-08-14T15:23
+texd,District Court D. Texas,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+txed,District Court E.D. Texas,1591,Federal District,E.D. Tex.,Unknown,Unknown,Yes,2013-08-14T15:23
+txnd,District Court N.D. Texas,2412,Federal District,N.D. Tex.,Unknown,Unknown,Yes,2013-08-14T15:23
+txsd,District Court S.D. Texas,3497,Federal District,S.D. Tex.,Unknown,Unknown,Yes,2013-10-22T08:56
+txwd,District Court W.D. Texas,1283,Federal District,W.D. Tex.,Unknown,Unknown,Yes,2013-10-22T08:56
+utd,United States District Court D. Utah,1237,Federal District,D. Utah,Unknown,Unknown,Yes,2013-08-15T09:21
+vtd,District Court D. Vermont,668,Federal District,D. Vt.,Unknown,Unknown,Yes,2013-08-14T22:50
+vad,District Court D. Virginia,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+vaed,District Court E.D. Virginia,4530,Federal District,E.D. Va.,Unknown,Unknown,Yes,2013-08-14T15:23
+vawd,District Court W.D. Virginia,2018,Federal District,W.D. Va.,Unknown,Unknown,Yes,2013-08-14T15:23
+washd,District Court D. Washington,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+waed,District Court E.D. Washington,437,Federal District,E.D. Wash.,3/2/1905,Unknown,Yes,2013-10-22T08:57
+wawd,District Court W.D. Washington,1146,Federal District,W.D. Wash.,3/2/1905,Unknown,Yes,2013-10-22T08:57
+wvad,District Court D. West Virginia,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+wvnd,District Court N.D. West Virginia,466,Federal District,N.D.W. Va.,Unknown,Unknown,Yes,2013-10-22T08:57
+wvsd,District Court S.D. West Virginia.,1238,Federal District,S.D.W. Va,Unknown,Unknown,Yes,2013-10-22T08:57
+wisd,District Court D. Wisconsin,0,Federal District,,Unknown,Unknown,Yes,2016-03-16T18:01
+wied,District Court E.D. Wisconsin,2740,Federal District,D. Wis.,Unknown,Unknown,Yes,2013-10-22T08:57
+wiwd,District Court W.D. Wisconsin,1181,Federal District,W.D. Wis.,Unknown,Unknown,Yes,2013-10-22T08:58
+wyd,District Court D. Wyoming,481,Federal District,D. Wyo.,Unknown,Unknown,Yes,2013-08-14T15:23
+canalzoned,District Court Canal Zone,26,Federal District,D.C.Z.,7/26/1937,3/31/1982,Yes,2013-08-19T19:04
+gud,District Court D. Guam,38,Federal District,D. Guam,Unknown,Unknown,Yes,2013-08-19T17:14
+nmid,District Court Northern Mariana Islands,16,Federal District,N. Mar. I.,Unknown,Unknown,Yes,2013-08-15T12:41
+prd,District Court D. Puerto Rico,4054,Federal District,D.P.R.,Unknown,Unknown,Yes,2013-08-15T10:00
+vid,District Court Virgin Islands,656,Federal District,D.V.I.,Unknown,Unknown,Yes,2013-08-15T10:06
+ala,Supreme Court of Alabama,16421,State Supreme,Ala.,Unknown,Unknown,Yes,2014-08-08T12:46
+alactapp,Alabama Court of Appeals,550,State Appellate,Ala. Ct. App.,Unknown,1/1/1969,Yes,2013-10-16T12:06
+alacrimapp,Court of Criminal Appeals of Alabama,12238,State Appellate,Ala. Crim. App.,Unknown,Unknown,Yes,2013-09-08T18:12
+alacivapp,Court of Civil Appeals of Alabama,9707,State Appellate,Ala. Civ. App.,Unknown,Unknown,Yes,2013-09-08T18:36
+alaska,Alaska Supreme Court,6116,State Supreme,Alaska,Unknown,Unknown,Yes,2013-08-14T09:46
+alaskactapp,Court of Appeals of Alaska,2039,State Appellate,Alaska Ct. App.,Unknown,Unknown,Yes,2014-09-02T16:00
+ariz,Arizona Supreme Court,6698,State Supreme,Ariz.,Unknown,Unknown,Yes,2013-08-14T09:46
+arizctapp,Court of Appeals of Arizona,10961,State Appellate,Ariz. Ct. App.,Unknown,Unknown,Yes,2013-10-16T11:58
+ariztaxct,Arizona Tax Court,22,State Special,Ariz. T.C.,Unknown,Unknown,Yes,2013-08-14T15:42
+ark,Supreme Court of Arkansas,10523,State Supreme,Ark.,Unknown,Unknown,Yes,2013-09-08T18:32
+arkctapp,Court of Appeals of Arkansas,4439,State Appellate,Ark. Ct. App.,Unknown,Unknown,Yes,2013-09-09T10:36
+arkworkcompcom,Arkansas Workers' Compensation Commission,0,State Special,Ark. Workers' Comp.,Unknown,Unknown,Yes,2016-05-18T10:52
+arkag,Arkansas Attorney General Reports,0,State Attorney General,Ark. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:01
+cal,California Supreme Court,10985,State Supreme,Cal.,Unknown,Unknown,Yes,2013-08-14T09:46
+calctapp,California Court of Appeal,67940,State Appellate,Cal. Ct. App.,Unknown,Unknown,Yes,2014-05-23T08:31
+calappdeptsuper,Appellate Division of the Superior Court of California,0,State Appellate,Cal. App. Dep’t Super. Ct.,Unknown,Unknown,Yes,2016-05-18T11:54
+calag,California Attorney General Reports,0,State Attorney General,Cal. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:03
+colo,Supreme Court of Colorado,9827,State Supreme,Colo.,Unknown,Unknown,Yes,2014-07-11T13:49
+coloctapp,Colorado Court of Appeals,9480,State Appellate,Colo. Ct. App.,Unknown,Unknown,Yes,2014-07-11T13:49
+coloworkcompcom,Colorado Industrial Claim Appeals Office,0,State Special,Colo. Indus. Cl. App.,Unknown,Unknown,Yes,2016-05-18T11:04
+coloag,Colorado Attorney General Reports,0,State Attorney General,Colo. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:04
+conn,Supreme Court of Connecticut,7177,State Supreme,Conn.,Unknown,Unknown,Yes,2014-07-17T14:35
+connappct,Connecticut Appellate Court,4222,State Appellate,Conn. App. Ct.,Unknown,Unknown,Yes,2014-07-17T14:35
+connsuperct,Connecticut Superior Court,107,State Appellate,Conn. Super. Ct.,Unknown,Unknown,Yes,2013-10-16T15:03
+connworkcompcom,Connecticut Compensation Review Board,0,State Special,Conn. Comp. Rev. Bd.,Unknown,Unknown,Yes,2016-05-18T11:09
+del,Supreme Court of Delaware,6805,State Supreme,Del.,Unknown,Unknown,Yes,2014-08-04T15:00
+delch,Court of Chancery of Delaware,1862,State Appellate,Del. Ch.,Unknown,Unknown,Yes,2013-09-09T12:19
+delsuperct,Superior Court of Delaware,2223,State Appellate,Del. Super. Ct.,Unknown,Unknown,Yes,2013-09-09T13:12
+delctcompl,Delaware Court of Common Pleas,140,State Special,Del. Ct. Com. Pl.,Unknown,Unknown,Yes,2014-08-04T15:09
+delfamct,Delaware Family Court,85,State Special,Del. Fm. Ct.,Unknown,Unknown,Yes,2013-10-16T14:32
+deljudct,Court on the Judiciary of Delaware.,5,State Special,Ct. Jud. Del.,Unknown,Unknown,Yes,2013-10-29T23:19
+dc,District of Columbia Court of Appeals,12922,State Supreme,D.C.,Unknown,Unknown,Yes,2013-10-16T11:54
+fla,Supreme Court of Florida,17306,State Supreme,Fla.,Unknown,Unknown,Yes,2014-08-01T09:49
+fladistctapp,District Court of Appeal of Florida,114114,State Appellate,Fla. Dist. Ct. App.,Unknown,Unknown,Yes,2014-08-01T09:49
+flaag,Florida Attorney General Reports,0,State Attorney General,Fla. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:05
+ga,Supreme Court of Georgia,17678,State Supreme,Ga.,Unknown,Unknown,Yes,2014-08-01T10:11
+gactapp,Court of Appeals of Georgia.,49237,State Appellate,Ga. Ct. App.,Unknown,Unknown,Yes,2014-08-01T10:12
+haw,Hawaii Supreme Court,5153,State Supreme,Haw.,Unknown,Unknown,Yes,2013-08-14T09:46
+hawapp,Hawaii Intermediate Court of Appeals,5551,State Appellate,Haw. App.,Unknown,Unknown,Yes,2013-08-14T15:42
+idaho,Idaho Supreme Court,7321,State Supreme,Idaho,Unknown,Unknown,Yes,2013-08-14T09:46
+idahoctapp,Idaho Court of Appeals,3365,State Appellate,Idaho Ct. App.,Unknown,Unknown,Yes,2013-08-14T15:42
+ill,Illinois Supreme Court,16161,State Supreme,Ill.,Unknown,Unknown,Yes,2013-09-07T14:34
+illappct,Appellate Court of Illinois,73366,State Appellate,Ill. App. Ct.,Unknown,Unknown,Yes,2013-08-14T15:42
+ind,Indiana Supreme Court,13462,State Supreme,Ind.,Unknown,Unknown,Yes,2013-08-14T09:46
+indctapp,Indiana Court of Appeals,32207,State Appellate,Ind. Ct. App.,Unknown,Unknown,Yes,2014-09-08T13:26
+indtc,Indiana Tax Court,596,State Special,Ind. T.C.,Unknown,Unknown,Yes,2014-09-08T13:26
+iowa,Supreme Court of Iowa,13033,State Supreme,Iowa,Unknown,Unknown,Yes,2014-08-01T11:44
+iowactapp,Court of Appeals of Iowa,8395,State Appellate,Iowa Ct. App.,Unknown,Unknown,Yes,2014-08-01T11:44
+kan,Supreme Court of Kansas,10944,State Supreme,Kan.,Unknown,Unknown,Yes,2014-08-01T12:03
+kanctapp,Court of Appeals of Kansas,8151,State Appellate,Kan. Ct. App.,Unknown,Unknown,Yes,2014-08-01T12:03
+kanag,Kansas Attorney General Reports,0,State Attorney General,Kan. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:06
+ky,Kentucky Supreme Court,3060,State Supreme,Ky.,Unknown,Unknown,Yes,2014-08-08T10:26
+kyctapp,Court of Appeals of Kentucky,4899,State Appellate,Ky. Ct. App.,Unknown,Unknown,Yes,2013-09-09T09:45
+la,Supreme Court of Louisiana,26713,State Supreme,La.,Unknown,Unknown,Yes,2014-07-17T07:08
+lactapp,Louisiana Court of Appeal,46740,State Appellate,La. Ct. App.,Unknown,Unknown,Yes,2013-10-16T11:52
+laag,Louisiana Attorney General Reports,0,State Attorney General,La. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:06
+me,Supreme Judicial Court of Maine,8157,State Supreme,Me.,Unknown,Unknown,Yes,2014-06-23T09:59
+md,Court of Appeals of Maryland,14085,State Supreme,Md.,Unknown,Unknown,Yes,2014-06-27T13:56
+mdctspecapp,Court of Special Appeals of Maryland,8147,State Appellate,Md. Ct. Spec. App.,Unknown,Unknown,Yes,2014-06-27T13:56
+mdag,Maryland Attorney General Reports,0,State Attorney General,Md. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:08
+mass,Massachusetts Supreme Judicial Court,8987,State Supreme,Mass.,Unknown,Unknown,Yes,2014-07-17T07:48
+massappct,Massachusetts Appeals Court,3177,State Appellate,Mass. App. Ct.,Unknown,Unknown,Yes,2014-07-17T07:49
+masssuperct,Massachusetts Superior Court,0,State Appellate,Mass. Super. Ct.,Unknown,Unknown,Yes,2016-04-21T11:46
+massdistct,Massachusetts District Court,0,State Appellate,Mass. Dist. Ct.,Unknown,Unknown,Yes,2016-04-21T11:46
+maworkcompcom,Massachusetts Department of Industrial Accidents,0,State Special,Mass. Dep't Indus. Accid.,Unknown,Unknown,Yes,2016-05-18T12:03
+mich,Michigan Supreme Court,36755,State Supreme,Mich.,Unknown,Unknown,Yes,2013-08-14T09:46
+michctapp,Michigan Court of Appeals,22230,State Appellate,Mich. Ct. App.,Unknown,Unknown,Yes,2013-09-08T17:56
+minn,Supreme Court of Minnesota,12379,State Supreme,Minn.,Unknown,Unknown,Yes,2014-07-11T13:23
+minnctapp,Court of Appeals of Minnesota,10111,State Appellate,Minn. Ct. App.,Unknown,Unknown,Yes,2014-07-11T13:23
+miss,Mississippi Supreme Court,18927,State Supreme,Miss.,Unknown,Unknown,Yes,2013-08-14T09:46
+missctapp,Court of Appeals of Mississippi,5808,State Appellate,Miss. Ct. App.,Unknown,Unknown,Yes,2013-09-08T23:27
+mo,Supreme Court of Missouri,8077,State Supreme,Mo.,Unknown,Unknown,Yes,2013-09-08T19:00
+moctapp,Missouri Court of Appeals,28018,State Appellate,Mo. Ct. App.,Unknown,Unknown,Yes,2013-09-08T17:58
+moag,Missouri Attorney General Reports,0,State Attorney General,Mo. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:09
+mont,Montana Supreme Court,17444,State Supreme,Mont.,Unknown,Unknown,Yes,2013-08-14T09:46
+montag,Montana Attorney General Reports,0,State Attorney General,Mont. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:16
+neb,Nebraska Supreme Court,14439,State Supreme,Neb.,Unknown,Unknown,Yes,2013-08-14T09:46
+nebctapp,Nebraska Court of Appeals,1807,State Appellate,Neb. Ct. App.,Unknown,Unknown,Yes,2013-08-14T15:43
+nebag,Nebraska Attorney General Reports,0,State Attorney General,Neb. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:10
+nev,Nevada Supreme Court,7908,State Supreme,Nev.,Unknown,Unknown,Yes,2013-08-14T09:46
+nh,Supreme Court of New Hampshire,4099,State Supreme,N.H.,Unknown,Unknown,Yes,2014-07-02T13:37
+nj,Supreme Court of New Jersey,12751,State Supreme,N.J.,Unknown,Unknown,Yes,2013-09-08T18:34
+njsuperctappdiv,New Jersey Superior Court,19922,State Appellate,N.J. Super. Ct. App. Div.,Unknown,Unknown,Yes,2013-09-08T18:18
+njtaxct,New Jersey Tax Court,6,State Special,N.J. Tax Ct.,Unknown,Unknown,Yes,2013-10-16T14:42
+njch,New Jersey Court of Chancery,0,State Appellate,N.J. Ct. of Ch.,1684-01-01,12/31/1947,Yes,2016-06-18T13:01
+nm,New Mexico Supreme Court,7505,State Supreme,N.M.,Unknown,Unknown,Yes,2013-08-14T09:46
+nmctapp,New Mexico Court of Appeals,6139,State Appellate,N.M. Ct. App.,Unknown,Unknown,Yes,2013-08-14T15:43
+ny,New York Court of Appeals,16915,State Supreme,NY,Unknown,Unknown,Yes,2014-08-21T15:51
+nyappdiv,Appellate Division of the Supreme Court of the State of New York,15074,State Appellate,N.Y. App. Div.,Unknown,Unknown,Yes,2014-08-08T12:52
+nyappterm,Appellate Terms of the Supreme Court of New York,410,State Appellate,N.Y. App. Term.,Unknown,Unknown,Yes,2015-10-29T12:29
+nysupct,New York Supreme Court,37,State Trial,N.Y. Sup. Ct.,Unknown,Unknown,Yes,2015-10-29T12:44
+nyfamct,New York Family Court,1,State Special,N.Y. Fam. Ct.,Unknown,Unknown,Yes,2013-10-23T11:03
+nysurct,New York Surrogate's Court,4,State Special,N.Y. Sur. Ct.,Unknown,Unknown,Yes,2015-10-29T11:12
+nycivct,Civil Court of the City of New York,0,State Special,N.Y. City Civ. Ct.,Unknown,Unknown,Yes,2016-05-18T12:12
+nycrimct,Criminal Court of the City of New York,0,State Special,N.Y. City Crim. Ct.,Unknown,Unknown,Yes,2016-05-18T12:14
+nyag,New York Attorney General Reports,0,State Attorney General,N.Y. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:10
+nc,Supreme Court of North Carolina,15899,State Supreme,N.C.,Unknown,Unknown,Yes,2013-09-08T18:10
+ncctapp,Court of Appeals of North Carolina,21660,State Appellate,N.C. Ct. App.,Unknown,Unknown,Yes,2014-09-08T13:26
+ncsuperct,Superior Court of North Carolina,0,State Appellate,Sup. Ct. N.C.,Unknown,Unknown,Yes,2016-05-18T12:06
+ncworkcompcom,North Carolina Industrial Commission,0,State Special,N.C. Indus. Comm.,Unknown,Unknown,Yes,2016-05-18T12:09
+nd,North Dakota Supreme Court,10430,State Supreme,N.D.,Unknown,Unknown,Yes,2013-08-14T09:46
+ndctapp,North Dakota Court of Appeals,65,State Appellate,N.D. Ct. App.,Unknown,Unknown,Yes,2013-08-14T15:43
+ohio,Ohio Supreme Court,3011,State Supreme,Ohio,Unknown,Unknown,Yes,2013-08-15T13:09
+ohioctapp,Ohio Court of Appeals,20632,State Appellate,Ohio Ct. App.,Unknown,Unknown,Yes,2014-08-01T12:33
+ohioctcl,Ohio Court of Claims,1487,State Special,Ohio Ct. Cl.,Unknown,Unknown,Yes,2014-08-01T12:47
+okla,Supreme Court of Oklahoma,9880,State Supreme,Okla.,Unknown,Unknown,Yes,2014-07-11T13:29
+oklacivapp,Court of Civil Appeals of Oklahoma,3668,State Appellate,Okla. Civ. App.,1/1/1908,Unknown,Yes,2014-07-11T13:30
+oklacrimapp,Court of Criminal Appeals of Oklahoma,4553,State Appellate,Okla. Crim. App.,Unknown,Unknown,Yes,2014-07-11T13:30
+oklajeap,Oklahoma Judicial Ethics Advisory Panel,13,State Special,Okla. J.E.A.P.,Unknown,Unknown,Yes,2013-08-15T14:14
+oklacoj,Court on the Judiciary of Oklahoma,3,State Special,Okla. C.O.J.,Unknown,Unknown,Yes,2013-09-07T13:16
+oklaag,Oklahoma Attorney General Reports,0,State Special,Okla. Att’y Gen.,Unknown,Unknown,Yes,2014-07-11T13:44
+or,Oregon Supreme Court,12231,State Supreme,Or.,Unknown,Unknown,Yes,2013-08-14T09:46
+orctapp,Court of Appeals of Oregon,18652,State Appellate,Or. Ct. App.,Unknown,Unknown,Yes,2013-08-14T15:42
+ortc,Oregon Tax Court,0,State Special,Or. T.C.,Unknown,Unknown,Yes,2016-05-18T12:29
+pa,Supreme Court of Pennsylvania,29108,State Supreme,Pa.,Unknown,Unknown,Yes,2014-08-01T13:56
+pasuperct,Superior Court of Pennsylvania,35356,State Appellate,Pa. Super. Ct.,Unknown,Unknown,Yes,2014-08-01T13:56
+pacommwct,Commonwealth Court of Pennsylvania,11044,State Appellate,Pa. Commw. Ct.,Unknown,Unknown,Yes,2016-05-17T16:45
+cjdpa,Court of Judicial Discipline of Pennsylvania,41,State Special,Ct. Jud. Disc. Pa,Unknown,Unknown,Yes,2013-10-29T23:08
+ri,Supreme Court of Rhode Island,8678,State Supreme,R.I.,Unknown,Unknown,Yes,2014-08-08T13:59
+risuperct,Superior Court of Rhode Island,0,State Appellate,Sup. Ct. R.I.,Unknown,Unknown,Yes,2016-05-18T12:33
+sc,Supreme Court of South Carolina,8774,State Supreme,S.C.,Unknown,Unknown,Yes,2013-09-08T23:22
+scctapp,Court of Appeals of South Carolina,3851,State Appellate,S.C. Ct. App.,Unknown,Unknown,Yes,2013-09-09T09:44
+sd,South Dakota Supreme Court,7974,State Supreme,S.D.,Unknown,Unknown,Yes,2013-08-14T09:46
+tenn,Tennessee Supreme Court,5007,State Supreme,Tenn.,Unknown,Unknown,Yes,2013-09-08T16:57
+tennctapp,Court of Appeals of Tennessee,15131,State Appellate,Tenn. Ct. App.,Unknown,Unknown,Yes,2013-09-08T19:23
+tenncrimapp,Court of Criminal Appeals of Tennessee,18454,State Appellate,Tenn. Crim. App.,Unknown,Unknown,Yes,2013-09-09T09:30
+tennsuperct,Tennessee Superior Court for Law and Equity,0,State Appellate,Tenn. Sup. Ct.,1796-01-01,1809-12-31,Yes,2016-06-18T13:01
+tex,Texas Supreme Court,9091,State Supreme,Tex.,Unknown,Unknown,Yes,2014-08-08T10:27
+texapp,Court of Appeals of Texas,258143,State Appellate,Tex. App.,Unknown,Unknown,Yes,2014-08-08T10:27
+texcrimapp,Court of Criminal Appeals of Texas,28790,State Appellate,Tex. Crim. App.,Unknown,Unknown,Yes,2015-09-02T11:29
+texreview,Texas Special Court of Review,5,State Special,Tex. Rev.,Unknown,Unknown,Yes,2013-10-30T00:11
+texjpml,Texas Judicial Panel on Multidistrict Litigation,0,State Appellate,Tex. J.P.M.L.,Unknown,Unknown,Yes,2016-06-18T13:01
+texag,Texas Attorney General Reports,0,State Attorney General,Tex. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:12
+utah,Utah Supreme Court,7864,State Supreme,Utah,Unknown,Unknown,Yes,2013-08-14T09:46
+utahctapp,Court of Appeals of Utah,3453,State Appellate,Utah Ct. App.,Unknown,Unknown,Yes,2013-08-14T15:42
+vt,Supreme Court of Vermont,6897,State Supreme,Vt.,Unknown,Unknown,Yes,2013-09-09T10:24
+va,Supreme Court of Virginia,7555,State Supreme,Va.,Unknown,Unknown,Yes,2013-09-09T10:23
+vactapp,Court of Appeals of Virginia,5180,State Appellate,Va. Ct. App.,Unknown,Unknown,Yes,2013-09-09T10:05
+wash,Washington Supreme Court,14488,State Supreme,Wash.,Unknown,Unknown,Yes,2013-08-14T09:46
+washctapp,Court of Appeals of Washington,15309,State Appellate,Wash. Ct. App.,Unknown,Unknown,Yes,2013-08-14T15:42
+washag,Washington Attorney General Reports,0,State Attorney General,Wash. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:13
+wva,West Virginia Supreme Court,11268,State Supreme,W. Va.,Unknown,Unknown,Yes,2013-08-14T09:46
+wis,Wisconsin Supreme Court,13221,State Supreme,Wis.,Unknown,Unknown,Yes,2013-08-14T09:46
+wisctapp,Court of Appeals of Wisconsin,11625,State Appellate,Wis. Ct. App.,Unknown,Unknown,Yes,2013-09-08T18:29
+wisag,Wisconsin Attorney General Reports,0,State Attorney General,Wis. Att'y Gen.,Unknown,Unknown,Yes,2016-05-18T13:15
+wyo,Wyoming Supreme Court,7166,State Supreme,Wyo.,Unknown,Unknown,Yes,2013-08-14T09:46
+usjc,United States Judicial Conference Committee,5,Committee,U.S.J.C.,Unknown,Unknown,Yes,2013-08-14T15:40
+jpml,United States Judicial Panel on Multidistrict Litigation,1122,Committee,J.P.M.L.,Unknown,Unknown,Yes,2013-08-15T17:19
+stp,United States Special Tribunal of Pennsylvania,1,Committee,Special Tribunal of Pa.,Unknown,Unknown,Yes,2014-11-24T09:07
+kingsbench,Court of King's Bench,0,International,King's Bench,1200-01-01,1873-12-31,Yes,2016-05-18T10:52
