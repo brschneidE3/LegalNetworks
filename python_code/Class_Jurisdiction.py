@@ -1,6 +1,6 @@
 import datetime
 import os
-import beesh
+import helper_functions
 import re
 
 __author__ = 'brsch'
@@ -9,51 +9,51 @@ cwd = os.getcwd()
 data_dir = cwd + r'\Data'
 
 
-def Create_Jurisdiction_Dict(directory):
-    data_list = beesh.csv_to_list(directory, 'jurisdictions.csv', 1, 0)
+def create_jurisdiction_dict(directory):
+    data_list = helper_functions.csv_to_list(directory, 'jurisdictions.csv', 1, 0)
     juris_dict = {}
 
     for row in data_list:
-        new_juris = Row_To_Jurisdiction(row)
+        new_juris = row_to_jurisdiction(row)
         new_abbrev = new_juris.abbrev
         juris_dict[new_abbrev] = new_juris
 
     return juris_dict
 
 
-def Row_To_Jurisdiction(row):
-    abbrev, name, count, jurisdiction, cit_abbrev, start_date, end_date,
-    use_string, mod_string = row
+def row_to_jurisdiction(row):
+    abbrev, name, count, jurisdiction, cit_abbrev, start_date, end_date, \
+        use_string, mod_string = row
 
     if start_date == 'Unknown':
         start_date = None
     elif '-' in start_date:
         start_date = datetime.date(
-                                int(start_date.rsplit('-')[0]),
-                                int(start_date.rsplit('-')[1]),
-                                int(start_date.rsplit('-')[2])
-                                )
+            int(start_date.rsplit('-')[0]),
+            int(start_date.rsplit('-')[1]),
+            int(start_date.rsplit('-')[2])
+            )
     elif '/' in start_date:
         start_date = datetime.date(
-                                int(start_date.rsplit('/')[2]),
-                                int(start_date.rsplit('/')[0]),
-                                int(start_date.rsplit('/')[1])
-                                )
+            int(start_date.rsplit('/')[2]),
+            int(start_date.rsplit('/')[0]),
+            int(start_date.rsplit('/')[1])
+            )
 
     if end_date == 'Unknown':
         end_date = None
     elif '-' in end_date:
         end_date = datetime.date(
-                                int(end_date.rsplit('-')[0]),
-                                int(end_date.rsplit('-')[1]),
-                                int(end_date.rsplit('-')[2])
-                                )
+            int(end_date.rsplit('-')[0]),
+            int(end_date.rsplit('-')[1]),
+            int(end_date.rsplit('-')[2])
+            )
     elif '/' in end_date:
         end_date = datetime.date(
-                                int(end_date.rsplit('/')[2]),
-                                int(end_date.rsplit('/')[0]),
-                                int(end_date.rsplit('/')[1])
-                                )
+            int(end_date.rsplit('/')[2]),
+            int(end_date.rsplit('/')[0]),
+            int(end_date.rsplit('/')[1])
+            )
 
     in_use = True if use_string == 'Yes' else False
     mod_date_string = mod_string.rsplit('T')[0],
@@ -61,12 +61,12 @@ def Row_To_Jurisdiction(row):
     mod_date_string = mod_date_string.rsplit('-')
     mod_time_string = mod_time_string.rsplit(':')
     modified = datetime.datetime(
-                                int(mod_date_string[0]),
-                                int(mod_date_string[1]),
-                                int(mod_date_string[2]),
-                                int(mod_time_string[0]),
-                                int(mod_time_string[1])
-                                )
+        int(mod_date_string[0]),
+        int(mod_date_string[1]),
+        int(mod_date_string[2]),
+        int(mod_time_string[0]),
+        int(mod_time_string[1])
+        )
 
     new_juris = Jurisdiction(abbrev=abbrev,
                              name=name,
@@ -127,4 +127,4 @@ class Jurisdiction:
                % (self.abbrev, self.name, self.count, self.jurisdiction,
                   self.start_date, self.end_date, self.in_use)
 
-jurisdiction_dict = Create_Jurisdiction_Dict(data_dir)
+jurisdiction_dict = create_jurisdiction_dict(data_dir)
