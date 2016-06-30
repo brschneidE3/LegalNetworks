@@ -1,15 +1,16 @@
-__author__ = 'brsch'
-
 import datetime
 import os
 import beesh
 import re
 
+__author__ = 'brsch'
+
 cwd = os.getcwd()
 data_dir = cwd + r'\Data'
 
+
 def Create_Jurisdiction_Dict(directory):
-    data_list = beesh.csv_to_list(directory,'jurisdictions.csv',1,0)
+    data_list = beesh.csv_to_list(directory, 'jurisdictions.csv', 1, 0)
     juris_dict = {}
 
     for row in data_list:
@@ -19,9 +20,11 @@ def Create_Jurisdiction_Dict(directory):
 
     return juris_dict
 
+
 def Row_To_Jurisdiction(row):
-    abbrev, name, count, jurisdiction, cit_abbrev, start_date, end_date, use_string, mod_string = row
-    
+    abbrev, name, count, jurisdiction, cit_abbrev, start_date, end_date,
+    use_string, mod_string = row
+
     if start_date == 'Unknown':
         start_date = None
     elif '-' in start_date:
@@ -36,7 +39,7 @@ def Row_To_Jurisdiction(row):
                                 int(start_date.rsplit('/')[0]),
                                 int(start_date.rsplit('/')[1])
                                 )
-        
+
     if end_date == 'Unknown':
         end_date = None
     elif '-' in end_date:
@@ -53,7 +56,8 @@ def Row_To_Jurisdiction(row):
                                 )
 
     in_use = True if use_string == 'Yes' else False
-    mod_date_string, mod_time_string = mod_string.rsplit('T')[0], mod_string.rsplit('T')[1]
+    mod_date_string = mod_string.rsplit('T')[0],
+    mod_time_string = mod_string.rsplit('T')[1]
     mod_date_string = mod_date_string.rsplit('-')
     mod_time_string = mod_time_string.rsplit(':')
     modified = datetime.datetime(
@@ -65,29 +69,30 @@ def Row_To_Jurisdiction(row):
                                 )
 
     new_juris = Jurisdiction(abbrev=abbrev,
-                 name=name,
-                 count=count,
-                 jurisdiction=jurisdiction,
-                 citation_abbrev=cit_abbrev,
-                 start_date=start_date,
-                 end_date=end_date,
-                 in_use=in_use,
-                 modified=modified)
+                             name=name,
+                             count=count,
+                             jurisdiction=jurisdiction,
+                             citation_abbrev=cit_abbrev,
+                             start_date=start_date,
+                             end_date=end_date,
+                             in_use=in_use,
+                             modified=modified)
 
     return new_juris
+
 
 class Jurisdiction:
 
     def __init__(self,
-                abbrev,
-                name=None,
-                count=None,
-                jurisdiction=None,
-                citation_abbrev=None,
-                start_date=None,
-                end_date=None,
-                in_use=None,
-                modified=None
+                 abbrev,
+                 name=None,
+                 count=None,
+                 jurisdiction=None,
+                 citation_abbrev=None,
+                 start_date=None,
+                 end_date=None,
+                 in_use=None,
+                 modified=None
                  ):
         """
         :param abbrev: STRING
@@ -119,6 +124,7 @@ class Jurisdiction:
                "Start date: \t %s \n"\
                "End date: \t \t %s \n"\
                "In use: \t \t %s \n"\
-               %(self.abbrev,self.name,self.count,self.jurisdiction,self.start_date,self.end_date,self.in_use)
+               % (self.abbrev, self.name, self.count, self.jurisdiction,
+                  self.start_date, self.end_date, self.in_use)
 
 jurisdiction_dict = Create_Jurisdiction_Dict(data_dir)
