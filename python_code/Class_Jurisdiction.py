@@ -10,8 +10,8 @@ data_dir = cwd + r'\data'
 
 
 def create_jurisdiction_dict(directory):
-    data_list = helper_functions.csv_to_list(directory,
-                                             'jurisdictions.csv', 1, 0)
+
+    data_list = helper_functions.csv_to_list(directory, 'jurisdictions.csv', 1, 0)
     juris_dict = {}
 
     for row in data_list:
