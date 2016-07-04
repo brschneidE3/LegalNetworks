@@ -5,14 +5,20 @@ import datetime
 
 __author__ = 'idc9'
 
-cwd = os.getcwd()
-data_dir = cwd + r'..\data'
+proj_cwd = os.path.dirname(os.getcwd())
+data_dir = proj_cwd + r'\data'
 
 
-# Given the juristidction, file type and root path to data
-# Returns a list of case ids in that jurisdiction
 def get_cases_in_jurisdiction(juris_abv='nced', file_type='opinions',
                               data_dir='../data'):
+    """
+    Given the juristidction, file type and root path to data
+    Returns a list of case ids in that jurisdiction
+    :param juris_abv:
+    :param file_type:
+    :param data_dir:
+    :return:
+    """
 
     # path leading to the jurisdiction files
     path = data_dir + '/' + file_type + '/' + juris_abv + '/'
@@ -25,17 +31,12 @@ def get_cases_in_jurisdiction(juris_abv='nced', file_type='opinions',
     else:
         return [int(f.split('.json')[0]) for f in os.listdir(path)]
 
-# Cases in the nced
-nced_case_ids = get_cases_in_jurisdiction('nced')
 
+def json_to_case(file_number, parent_dir):
 
-class Case:
-    """
-    Case class that store the metadata for a case node
-    Requires the opinion and cluster files
-    Stores: case_name, case_id, date, case text
-    """
-    def __init__(self, op_file, cl_file):
+        file_suffix = r'%s\%s.json' % (parent_dir, file_number)
+        cl_file = data_dir + r'\clusters\%s' % file_suffix
+        op_file = data_dir + r'\opinions\%s' % file_suffix
 
         # Open the cluster and opinion json files
         with open(cl_file) as data_file:
@@ -66,21 +67,27 @@ class Case:
             else:
                 op_data[k.encode('utf8')] = value
 
-        for k in cl_data.keys():
-            if k == 'case_name':
-                self.case_name = cl_data[k]
+        try:
+            case_name = cl_data['case_name']
+        except KeyError:
+            case_name = None
 
-            if k == 'citation_id':
-                self.case_id = cl_data[k]
+        try:
+            case_id = cl_data['citation_id']
+        except KeyError:
+            case_id = None
 
-            if k == 'date_filed':
-                # TODO: make sure date is always in this format
-                date_explode = cl_data['date_filed'].split('-')
-                file_date = datetime.date(int(date_explode[0]),
-                                          int(date_explode[1]),
-                                          int(date_explode[2]))
-                self.date = file_date
+        if 'date_filed' in cl_data.keys():
+            # TODO: make sure date is always in this format
+            date_explode = cl_data['date_filed'].split('-')
+            file_date = datetime.date(int(date_explode[0]),
+                                      int(date_explode[1]),
+                                      int(date_explode[2]))
+            date = file_date
+        else:
+            date = None
 
+        # FIXME
         # Get the case text
         text = op_data['html']
         if len(text) == 0:
@@ -93,16 +100,40 @@ class Case:
             text = ''
             print('case ' + str(i) + ' has no text')
 
+        case_instance = Case(case_name, case_id, date, text)
+        return case_instance
+
+
+class Case:
+    """
+    Case class that store the metadata for a case node
+    Requires the opinion and cluster files
+    Stores: case_name, case_id, date, case text
+    """
+    def __init__(self, case_name, case_id, date, text):
+
+        self.case_name = case_name
+        self.case_id = case_id
+        self.date = date
         self.text = text
 
     def __repr__(self):
         return "Name: \t %s \n"\
-               "Id \t %s \n"\
+               "Id \t \t %s \n"\
                "Date \t %s \n"\
-                % (self.case_name, self.case_id, self.date)
+            % (self.case_name, self.case_id, self.date)
 
+<<<<<<< HEAD
 # Example code to load a case
+=======
+# Cases in the nced
+nced_case_ids = get_cases_in_jurisdiction('nced')
+
+# Create cluster & opinion file paths
+>>>>>>> d0fc076e94239b0db3af5330e47bd63ede436032
 cl_file = data_dir + '/clusters/nced/1361899.json'
 op_file = data_dir + '/opinions/nced/1361899.json'
 
-case = Case(op_file, cl_file)
+# Create case object
+case = json_to_case(file_number=1361899, parent_dir='nced')
+print case
