@@ -101,7 +101,7 @@ class Case:
                "Date \t %s \n"\
                 % (self.case_name, self.case_id, self.date)
 
-
+# Example code to load a case
 cl_file = data_dir + '/clusters/nced/1361899.json'
 op_file = data_dir + '/opinions/nced/1361899.json'
 
