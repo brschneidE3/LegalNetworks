@@ -5,8 +5,8 @@ import re
 
 __author__ = 'brsch'
 
-cwd = os.getcwd()
-data_dir = cwd + r'\Data'
+proj_cwd = os.path.dirname(os.getcwd())
+data_dir = proj_cwd + r'\data'
 
 
 def create_jurisdiction_dict(directory):
@@ -56,7 +56,7 @@ def row_to_jurisdiction(row):
             )
 
     in_use = True if use_string == 'Yes' else False
-    mod_date_string = mod_string.rsplit('T')[0],
+    mod_date_string = mod_string.rsplit('T')[0]
     mod_time_string = mod_string.rsplit('T')[1]
     mod_date_string = mod_date_string.rsplit('-')
     mod_time_string = mod_time_string.rsplit(':')
