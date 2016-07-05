@@ -4,7 +4,7 @@ TO DO:
     - MICHAEL: Create branch
     - MICHAEL: Checkout branch and pull project and make edits below
     - MICHAEL: Push to origin branch and make pull request
-    - BRENDAN: find links to Youtube videos on github
+    - Link to helpful Youtube video: https://www.youtube.com/watch?v=0fKg7e37bQE
 
     ## helper_functions ##
     - MICHAEL: Write subdir_exists
