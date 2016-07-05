@@ -1,9 +1,13 @@
+
+"""
+ADD A DESCRIPTION OF WHAT THIS FILE IS FOR
+"""
+__author__ = 'brsch'
+
 import datetime
 import os
 import helper_functions
-import re
 
-__author__ = 'brsch'
 
 proj_cwd = os.path.dirname(os.getcwd())
 data_dir = proj_cwd + r'\data'
@@ -69,20 +73,21 @@ def row_to_jurisdiction(row):
         int(mod_time_string[1])
         )
 
-    new_juris = Jurisdiction(abbrev=abbrev,
-                             name=name,
-                             count=count,
-                             jurisdiction=jurisdiction,
-                             citation_abbrev=cit_abbrev,
-                             start_date=start_date,
-                             end_date=end_date,
-                             in_use=in_use,
-                             modified=modified)
+    new_juris = JurisdictionClass(
+        abbrev=abbrev,
+        name=name,
+        count=count,
+        jurisdiction=jurisdiction,
+        citation_abbrev=cit_abbrev,
+        start_date=start_date,
+        end_date=end_date,
+        in_use=in_use,
+        modified=modified)
 
     return new_juris
 
 
-class Jurisdiction:
+class JurisdictionClass:
 
     def __init__(self,
                  abbrev,

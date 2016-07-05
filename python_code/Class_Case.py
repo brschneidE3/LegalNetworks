@@ -1,35 +1,40 @@
+
+"""
+ADD A DESCRIPTION OF WHAT THIS FILE IS FOR
+"""
+__author__ = 'idc9'
+
 import os
 import sys
 import json
 import datetime
 
-__author__ = 'idc9'
 
 proj_cwd = os.path.dirname(os.getcwd())
 data_dir = proj_cwd + r'\data'
 
 
-def get_cases_in_jurisdiction(juris_abv='nced', file_type='opinions',
-                              data_dir='../data'):
-    """
-    Given the juristidction, file type and root path to data
-    Returns a list of case ids in that jurisdiction
-    :param juris_abv:
-    :param file_type:
-    :param data_dir:
-    :return:
-    """
-
-    # path leading to the jurisdiction files
-    path = data_dir + '/' + file_type + '/' + juris_abv + '/'
-
-    # TODO: throw an exception
-    # Check that the directory exists
-    if not os.path.isdir(path):
-        print 'not a legal path'
-        return []
-    else:
-        return [int(f.split('.json')[0]) for f in os.listdir(path)]
+# def get_cases_in_jurisdiction(juris_abv='nced', file_type='opinions',
+#                               data_dir='../data'):
+#     """
+#     Given the juristidction, file type and root path to data
+#     Returns a list of case ids in that jurisdiction
+#     :param juris_abv:
+#     :param file_type:
+#     :param data_dir:
+#     :return:
+#     """
+#
+#     # path leading to the jurisdiction files
+#     path = data_dir + '/' + file_type + '/' + juris_abv + '/'
+#
+#     # TODO: throw an exception
+#     # Check that the directory exists
+#     if not os.path.isdir(path):
+#         print 'not a legal path'
+#         return []
+#     else:
+#         return [int(f.split('.json')[0]) for f in os.listdir(path)]
 
 
 def json_to_case(file_number, parent_dir):
@@ -77,6 +82,11 @@ def json_to_case(file_number, parent_dir):
         except KeyError:
             case_id = None
 
+        try:
+            docket_url = cl_data['dockets']
+        except:
+            docket_url = None
+
         if 'date_filed' in cl_data.keys():
             # TODO: make sure date is always in this format
             date_explode = cl_data['date_filed'].split('-')
@@ -87,7 +97,7 @@ def json_to_case(file_number, parent_dir):
         else:
             date = None
 
-        # FIXME
+        # FIXME ???
         # Get the case text
         text = op_data['html']
         if len(text) == 0:
@@ -100,22 +110,32 @@ def json_to_case(file_number, parent_dir):
             text = ''
             print('case ' + str(i) + ' has no text')
 
-        case_instance = Case(case_name, case_id, date, text)
+        case_instance = CaseClass(case_name, case_id, date, text, docket_url)
         return case_instance
 
 
-class Case:
+def create_dict_of_cases(list_of_file_numbers_and_parent_dirs):
+    """
+    Iterate through the list of file numbers and parent dirs,
+     run json_to_case on each pair and
+     create dictionary of the cases.
+    """
+    pass
+
+
+class CaseClass:
     """
     Case class that store the metadata for a case node
-    Requires the opinion and cluster files
+    Union of opinion and cluster files
     Stores: case_name, case_id, date, case text
     """
-    def __init__(self, case_name, case_id, date, text):
+    def __init__(self, case_name, case_id, date, text, docket_url):
 
         self.case_name = case_name
         self.case_id = case_id
         self.date = date
         self.text = text
+        self.docket_url = docket_url
 
     def __repr__(self):
         return "Name: \t %s \n"\
@@ -123,14 +143,13 @@ class Case:
                "Date \t %s \n"\
             % (self.case_name, self.case_id, self.date)
 
-<<<<<<< HEAD
-# Example code to load a case
-=======
-# Cases in the nced
-nced_case_ids = get_cases_in_jurisdiction('nced')
+#############
+# SCRIPTING
+#############
 
-# Create cluster & opinion file paths
->>>>>>> d0fc076e94239b0db3af5330e47bd63ede436032
+# Cases in the nced
+# nced_case_ids = get_cases_in_jurisdiction('nced')
+
 cl_file = data_dir + '/clusters/nced/1361899.json'
 op_file = data_dir + '/opinions/nced/1361899.json'
 

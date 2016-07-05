@@ -1,0 +1,25 @@
+TO DO:
+
+    ## GITHUB ##
+    - MICHAEL: Create branch
+    - MICHAEL: Checkout branch and pull project and make edits below
+    - MICHAEL: Push to origin branch and make pull request
+    - BRENDAN: find links to Youtube videos on github
+
+    ## helper_functions ##
+    - MICHAEL: Write subdir_exists
+    - MICHAEL: Write create_subdir
+
+    ## data_scraping ##
+    - MICHAEL: Write is_downloaded
+    - MICHAEL: Write download_case
+
+    ## THEORY ##
+    - IAIN: Look into Python graph-theory packages and decide if any of them are sufficiently similar to what we want
+        -Do we want to start with a baseline package and then make our own addition?
+        -Do we want to build from scratch?
+    - IAIN: As it becomes clear what kind of analytic functionality we need to build, accumulate a list of functions
+        and functionality to work on
+
+    ## IF YOU HAVE NOTHING TO DO ##
+    - Confirm that all current code is pep8 approved

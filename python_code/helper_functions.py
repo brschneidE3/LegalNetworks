@@ -1,13 +1,45 @@
+
+"""
+ADD A DESCRIPTION OF WHAT THIS FILE IS FOR
+"""
+
 __author__ = 'brendan'
+
 import os
 import numpy as np
 import csv
+import ast
+import urllib2
 
 
-def csv_to_list(directory,filename,has_header=0,want_header=0):
+def subdir_exists(path):
+    # TODO
+    pass
+
+
+def create_subdir(subdir):
+    # TODO
+    pass
+
+
+def url_to_dict(url):
+    """
+    :param url: String representing a json-style object on Court Listener's REST API
+    :return: html_as_dict, a dictionary of the data on the HTML page
+    """
+    response = urllib2.urlopen(url)
+    html = response.read()
+    html = html.replace('false', 'False')
+    html = html.replace('true', 'True')
+    html = html.replace('null', 'None')
+    html_as_dict = ast.literal_eval(html)
+    return html_as_dict
+
+
+def csv_to_list(directory, filename, has_header=0, want_header=0):
 
     if directory[-1] == '\\' or filename[0] == '\\':
-        0
+        pass
     else:
         directory += '\\'
     the_file = open(directory + filename)
@@ -303,12 +335,14 @@ def Excel_NPV(rate,values):
 
     return Excel_npv
 
+
 def dictionary_to_XLnpv(rate, dictionary, years):
 
     values = [dictionary[year] for year in years]
     Excel_npv = Excel_NPV(rate,values)
 
     return Excel_npv
+
 
 def isnumeric(num):
 
@@ -317,6 +351,7 @@ def isnumeric(num):
         return True
     except ValueError:
         return False
+
 
 def DeleteFilenamesStartingWith(Directory, StartingString):
 
