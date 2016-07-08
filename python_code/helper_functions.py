@@ -14,14 +14,11 @@ import urllib2
 
 def subdir_exists(path):
     # TODO
-    # pass
-    judgement = os.path.exists(path)
-    return judgement
+    pass
 
 
 def create_subdir(subdir):
     # TODO
-    os.makedirs(subdir)
     pass
 
 

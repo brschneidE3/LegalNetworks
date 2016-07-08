@@ -7,9 +7,6 @@ __author__ = 'brsch'
 import helper_functions
 import os
 
-import urllib
-import json
-
 proj_cwd = os.path.dirname(os.getcwd())
 data_dir = proj_cwd + r'\data'
 
@@ -61,11 +58,11 @@ def pull_cases_by_court(court_id):
     # Iterate through each cluster on last page
     for individual_cluster in clusters_dict['results']:
 
-        new_cluster_url = individual_cluster['cluster'] ## where is this key?
+        new_cluster_url = individual_cluster['cluster']
         new_cluster_dict = helper_functions.url_to_dict(new_cluster_url)
-        new_cluster_docket_url = new_cluster_dict['dockets'] ## where is this key?
+        new_cluster_docket_url = new_cluster_dict['dockets']
         new_cluster_docket_dict = helper_functions.url_to_dict(new_cluster_docket_url)
-        new_cluster_court = new_cluster_docket_dict['court'] ## where is this key?
+        new_cluster_court = new_cluster_docket_dict['court']
 
         if new_cluster_court == court_id:
             file_number = new_cluster_dict['citation_id']
@@ -80,49 +77,20 @@ def is_downloaded(file_number, parent_directory):
     # TODO
     """
     Should check if corresponding cluster & opinion json files have been downloaded to appropriate path:
-        data_dir + r'\clusters\COURT NAME\FILE NUMBER.json'
+        data_dir + r'\clusters\COURT NAME\FILE NUMBER.json
                             &
-        data_dir + r'\opinions\COURT NAME\FILE NUMBER.json'
+        data_dir + r'\opinions\COURT NAME\FILE NUMBER.json
 
     Return True or False.
     """
-
-    some_boolean = os.path.exists(data_dir + r"/clusters/" + parent_directory + r"/" + file_number + r".json") and os.path.exists(data_dir + r"/opinions" + parent_directory + r"/" + file_number + r".json")
-    return some_boolean
+    return True
 
 
-def download_case(new_cluster_url):
+def download_case(cluster_url):
     # TODO
     """
     Download opinion and cluster files if they are missing.
     """
-
-    ## get json object
-    uh = urllib.urlopen(new_cluster_url)
-    data = uh.read()
-    js = json.loads(str(data))
-
-
-    ## get the court_id / parent_directory
-    new_cluster_docket_url = new_cluster_dict['dockets']
-    new_cluster_docket_dict = helper_functions.url_to_dict(new_cluster_docket_url)
-    new_cluster_court = new_cluster_docket_dict['court']
-    parent_directory = new_cluster_court
-
-    ## get the citation_id / file_number
-    new_cluster_dict = helper_functions.url_to_dict(new_cluster_url)
-    file_number = new_cluster_dict['citation_id']
-
-
-    ## make it into a file with the proper directory path
-    file_name = data_dir + r'/clusters/' + parent_directory + r'/' + file_number + r'.json'
-    with open(file_name, 'w') as outfile:
-        json.dumps(js, outfile, indent=4)
-
-    ## TODO? :
-    ## Do I need to download for the opinion file? In the argument above, the argument passed was only for the cluster file I think...
-    ## I just follow the same code syntax as lines 45, 47, 49 for the unknown keys... so this code isn't foolproof yet logically speaking
-
     pass
 
 
