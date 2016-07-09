@@ -102,8 +102,8 @@ def download_case(new_cluster_url):
     data = uh.read()
     js = json.loads(str(data))
 
-
     ## get the court_id / parent_directory
+    new_cluster_dict = helper_functions.url_to_dict(new_cluster_url)
     new_cluster_docket_url = new_cluster_dict['dockets']
     new_cluster_docket_dict = helper_functions.url_to_dict(new_cluster_docket_url)
     new_cluster_court = new_cluster_docket_dict['court']
@@ -113,16 +113,26 @@ def download_case(new_cluster_url):
     new_cluster_dict = helper_functions.url_to_dict(new_cluster_url)
     file_number = new_cluster_dict['citation_id']
 
-
-    ## make it into a file with the proper directory path
+    ## make cluster.json into a file with the proper directory path
     file_name = data_dir + r'/clusters/' + parent_directory + r'/' + file_number + r'.json'
     with open(file_name, 'w') as outfile:
         json.dumps(js, outfile, indent=4)
 
-    ## TODO? :
-    ## Do I need to download for the opinion file? In the argument above, the argument passed was only for the cluster file I think...
-    ## I just follow the same code syntax as lines 45, 47, 49 for the unknown keys... so this code isn't foolproof yet logically speaking
+    ## for opinion file:
+    new_opinion_url = new_cluster_dict['sub_opinions']
+    uh2 = urllib.urlopen(new_opinion_url)
+    data2 = uh2.read()
+    js2 = json.loads(str(data2))
 
+    ## make opinion.json into a file with the proper directory path
+    file_name2 = data_dir + r'/opinions/' + parent_directory + r'/' + file_number + r'.json'
+    with open(file_name2, 'w') as outfile2:
+        json.dumps(js2, outfile2, indent=4)
+
+
+    ## TODO? :
+    ## I just follow the same code syntax as lines 45, 47, 49 for the unknown keys... so this code isn't foolproof yet logically speaking
+    ## im still not sure where the keys are found "cluster", "dockets", "court" in lines 45, 47, 49 (any tips Brendan?)
     pass
 
 

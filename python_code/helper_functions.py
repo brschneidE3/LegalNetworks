@@ -13,16 +13,16 @@ import urllib2
 
 
 def subdir_exists(path):
-    # TODO
-    # pass
     judgement = os.path.exists(path)
     return judgement
 
 
 def create_subdir(subdir):
-    # TODO
     os.makedirs(subdir)
     pass
+    
+## TODO/NOTES:
+## Did I just oversimplify these functions?
 
 
 def url_to_dict(url):
