@@ -2,7 +2,7 @@
 """
 ADD A DESCRIPTION OF WHAT THIS FILE IS FOR
 """
-__author__ = 'brsch'
+__author__ = 'brsch, michaelkkim'
 
 import helper_functions
 import os
@@ -110,7 +110,6 @@ def download_case(new_cluster_url):
     parent_directory = new_cluster_court
 
     ## get the citation_id / file_number
-    new_cluster_dict = helper_functions.url_to_dict(new_cluster_url)
     file_number = new_cluster_dict['citation_id']
 
     ## make cluster.json into a file with the proper directory path
