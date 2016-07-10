@@ -119,7 +119,7 @@ def download_case(new_cluster_url):
         json.dumps(js, outfile, indent=4)
 
     ## for opinion file:
-    new_opinion_url = new_cluster_dict['sub_opinions']
+    new_opinion_url = new_cluster_dict['sub_opinions'][0]
     uh2 = urllib.urlopen(new_opinion_url)
     data2 = uh2.read()
     js2 = json.loads(str(data2))
