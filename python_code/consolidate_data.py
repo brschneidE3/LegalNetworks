@@ -148,10 +148,10 @@ def create_edge_sublist(court_name, master_cited_as_key):
                 edge_sublist.append([citer, opinion_id])
 
         id += 1
-        if id % 10 == 0:
+        if id % 1000 == 0:
             print '%s of %s IDs checked (%s)' % (id, num_ids, float(id)/num_ids)
 
     helper_functions.list_to_csv(court_dir + r'\citations_sublist.csv', edge_sublist)
 
 # master_citer_as_key, master_cited_as_key = get_master_edge_dicts()
-# create_edge_sublist('scotus',master_cited_as_key)
+# create_edge_sublist('scotus', master_cited_as_key)
