@@ -104,7 +104,8 @@ def download_court_data(court_name, curl_path):
         # Download the .tar.gz file
         print '...downloading new .tar.gz file...'
         download_url(url='https://www.courtlistener.com/api/bulk-data/opinions/%s.tar.gz' % court_name,
-                     destination_path=court_opinions_data_dir + r'\%s.tar.gz' % court_name)
+                     destination_path=court_opinions_data_dir + r'\%s.tar.gz' % court_name,
+                     curl_path=curl_path)
 
         # Extract it
         print '...extracting files...'
