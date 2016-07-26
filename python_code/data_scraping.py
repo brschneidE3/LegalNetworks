@@ -2,34 +2,25 @@
 """
 ADD A DESCRIPTION OF WHAT THIS FILE IS FOR
 """
-
-"""
-##################### NOTES TO BRENDAN/IAIN: #####################
-
-What I (michaelkkim) try to fix (assuming they were problems, which I'm not sure yet):
-1. fixed weird key values i.e. lines 42, 44, 46 in the original code "data_scraping.py"
-    the weird key values, respectively:
-        'cluster', 'dockets', 'court'
-    you can check them out in this url, but they can't be found: https://www.courtlistener.com/api/rest/v3/clusters/
-
-2. I fixed the line with key value "citation_id" as well (more explanation below)
-3. I did the directory string syntax as same as mcintosh/linux command/bash
-    Note: slash for mac/linux
-          backslash for windows cmd
-
-"""
-
-__author__ = 'brsch, michaelkkim'
+__author__ = 'brsch'
 
 import helper_functions
 import os
-
-import urllib
+import time
 import json
-import re
 
 proj_cwd = os.path.dirname(os.getcwd())
-data_dir = proj_cwd + r'/data'
+data_dir = proj_cwd + r'\data'
+
+# Unchanging courtlistener API info
+
+site_dict_url = 'https://www.courtlistener.com/api/rest/v3/'
+site_dict = helper_functions.url_to_dict(site_dict_url)
+# clusters_url = site_dict['clusters']
+
+starting_page = 2161
+clusters_url = 'https://www.courtlistener.com/api/rest/v3/clusters/?page=%s' % starting_page
+opinions_url = site_dict['opinions']
 
 
 def pull_cases_by_court(court_id):
@@ -38,135 +29,123 @@ def pull_cases_by_court(court_id):
     opinion) corresponding to that cluster has been downloaded ( via is_downloaded() ) and will build up a list of
     [case_number, parent_directory] tuples that will enable quick iteration and creation of a dictionary of cases
     in other functions via Class_Case.json_to_case.
-
     :param court_id: court id by which to filter
     :return:
+        case_numbers_and_parent_directories:
+            list of the case numbers and the parents directories where they are located
     """
+    start = time.time()
 
     # Initial info about the online clusters database
     clusters_dict = helper_functions.url_to_dict(clusters_url)
-    # Return variable
+    num_to_inspect = clusters_dict['count']
+    inspected = 0.
+    page = starting_page
+
+    # List of case numbers and parent directories that will eventually be returns
     case_numbers_and_parent_directories = []
 
-    # Make sure we already have these subdirectories. Create them if not.
-    subdirectories = [data_dir + r'/clusters/%s' % court_id, data_dir + r'/clusters/%s' % court_id] ## im not sure why this list has 2 elements of the same kind...
+    # Make sure we already have subdirectories for this court. Create them if not.
+    subdirectories = [data_dir + r'\clusters\%s' % court_id, data_dir + r'\opinions\%s' % court_id]
     for subdir in subdirectories:
-        if helper_functions.subdir_exists(subdir) is False:
-            helper_functions.create_subdir(subdir)
+        if not os.path.isdir(subdir):
+            os.makedirs(subdir)
 
-    # Iterate through each page of database
+    # As long as there are more pages to iterate through
     while clusters_dict['next'] is not None:
 
         # Iterate through each cluster on current page
         for individual_cluster in clusters_dict['results']:
+            time.sleep(2)  # Make sure we don't overload the server
+            inspected += 1.
+            pct_inspected = inspected / num_to_inspect
 
-            new_cluster_url = individual_cluster['resource_uri']
+            url_id_number = individual_cluster['resource_uri'].rsplit('/')[-2]
+            new_cluster_url = site_dict_url + r'clusters/%s' % url_id_number
             new_cluster_dict = helper_functions.url_to_dict(new_cluster_url)
+
             new_cluster_docket_url = new_cluster_dict['docket']
             new_cluster_docket_dict = helper_functions.url_to_dict(new_cluster_docket_url)
-            new_cluster_court_url = new_cluster_docket_dict['court']
-            match_court = re.search(r'(/courts/)(\w+)',  new_cluster_court_url)
-            new_cluster_court = match_court.group(2)
 
-            if new_cluster_court == court_id:
-                # file_number = new_cluster_dict['citation_id']
-                # NOTE: with the way we attributed the file_number in the GitHub json files, I think it's more correct to get it from the url, not the key, 'citation_id'
-                match_file_number = re.search(r'(/clusters/)(\d+)',new_cluster_url)
-                file_number = match_file_number.group(2)
-                parent_directory = court_id
-                case_numbers_and_parent_directories.append([file_number, parent_directory])
+            try:
+                new_cluster_court = new_cluster_docket_dict['court'].rsplit('/')[-2]
 
-                if not is_downloaded(file_number, parent_directory):
-                    download_case(new_cluster_url)
+                if new_cluster_court == court_id:
+                    file_number = new_cluster_dict['citation_id']
+                    parent_directory = court_id
+                    case_numbers_and_parent_directories.append([file_number, parent_directory])
 
+                    if not is_downloaded(file_number, parent_directory):
+                        download_case(new_cluster_dict, file_number, parent_directory)
+                    # print '%s DOWNLOADED. (%s)' % (file_number, pct_inspected)
+
+                else:
+                    pass
+                    # print '%s passed. (%s)' % (new_cluster_dict['citation_id'], pct_inspected)
+
+            except KeyError:  # If there is no court data
+                pass
+
+        print 'page %s checked. (%s)' % (page, pct_inspected)
+        page += 1
         clusters_dict = helper_functions.url_to_dict(clusters_dict['next'])
 
     # Iterate through each cluster on last page
     for individual_cluster in clusters_dict['results']:
+        time.sleep(2)  # Make sure we don't overload the server
 
-        new_cluster_url = individual_cluster['resource_uri']
+        new_cluster_url = individual_cluster['cluster']
         new_cluster_dict = helper_functions.url_to_dict(new_cluster_url)
-        new_cluster_docket_url = new_cluster_dict['docket']
+        new_cluster_docket_url = new_cluster_dict['dockets']
         new_cluster_docket_dict = helper_functions.url_to_dict(new_cluster_docket_url)
-        new_cluster_court_url = new_cluster_docket_dict['court']
-        match_court = re.search(r'(/courts/)(\w+)',  new_cluster_court_url)
-        new_cluster_court = match_court.group(2)
+        try:
+            new_cluster_court = new_cluster_docket_dict['court']
 
-        if new_cluster_court == court_id:
-            # file_number = new_cluster_dict['citation_id']
-            # NOTE: with the way we attributed the file_number in the GitHub json files, I think it's more correct to get it from the url, not the key, 'citation_id'
-            match_file_number = re.search(r'(/clusters/)(\d+)',new_cluster_url)
-            file_number = match_file_number.group(2)
-            parent_directory = court_id
-            case_numbers_and_parent_directories.append([file_number, parent_directory])
+            if new_cluster_court == court_id:
+                file_number = new_cluster_dict['citation_id']
+                parent_directory = court_id
+                case_numbers_and_parent_directories.append([file_number, parent_directory])
 
-            if not is_downloaded(file_number, parent_directory):
-                download_case(new_cluster_url)
+                if not is_downloaded(file_number, parent_directory):
+                    download_case(new_cluster_dict, file_number, parent_directory)
+        except KeyError:  # If there is no court data
+            pass
+
+    finish = time.time()
+    elapsed = finish - start
+    print "Download took %s minutes" % elapsed / 60.
+    return case_numbers_and_parent_directories
 
 
 def is_downloaded(file_number, parent_directory):
-    # TODO
     """
     Should check if corresponding cluster & opinion json files have been downloaded to appropriate path:
-        data_dir + r'/clusters/COURT NAME/FILE NUMBER.json'
+        data_dir + r'\clusters\COURT NAME\FILE NUMBER.json
                             &
-        data_dir + r'/opinions/COURT NAME/FILE NUMBER.json'
-
+        data_dir + r'\opinions\COURT NAME\FILE NUMBER.json
     Return True or False.
     """
+    op_downloaded = os.path.exists(data_dir + r'\opinions\%s\%s.json' % (file_number, parent_directory))
+    cl_downloaded = os.path.exists(data_dir + r'\clusters\%s\%s.json' % (file_number, parent_directory))
+    return op_downloaded and cl_downloaded
 
-    some_boolean = os.path.exists(data_dir + r"/clusters/" + parent_directory + r"/" + file_number + r".json") and os.path.exists(data_dir + r"/opinions" + parent_directory + r"/" + file_number + r".json")
-    return some_boolean
 
-
-def download_case(new_cluster_url):
+def download_case(cluster_dict, file_number, parent_directory):
     # TODO
     """
     Download opinion and cluster files if they are missing.
     """
+    with open(data_dir + r'\clusters\%s\%s.json' % (parent_directory, file_number), 'w') as fp:
+        json.dump(cluster_dict, fp)
 
-    ## get json object
-    uh = urllib.urlopen(new_cluster_url)
-    data = uh.read()
-    js = json.loads(str(data))
-
-    ## get the court_id / parent_directory
-    new_cluster_dict = helper_functions.url_to_dict(new_cluster_url)
-    new_cluster_docket_url = new_cluster_dict['docket']
-    new_cluster_docket_dict = helper_functions.url_to_dict(new_cluster_docket_url)
-    new_cluster_court_url = new_cluster_docket_dict['court']
-    match_court = re.search(r'(/courts/)(\w+)',  new_cluster_court_url)
-    new_cluster_court = match_court.group(2)
-    parent_directory = new_cluster_court
-
-    ## get the citation_id / file_number
-    match_file_number = re.search(r'(/clusters/)(\d+)',new_cluster_url)
-    file_number = match_file_number.group(2)
-
-    ## make cluster.json into a file with the proper directory path
-    file_name = data_dir + r'/clusters/' + parent_directory + r'/' + file_number + r'.json'
-    with open(file_name, 'w') as outfile:
-        json.dumps(js, outfile, indent=4)
-
-    ## for opinion file:
-    new_opinion_url = new_cluster_dict['sub_opinions'][0]
-    uh2 = urllib.urlopen(new_opinion_url)
-    data2 = uh2.read()
-    js2 = json.loads(str(data2))
-
-    ## make opinion.json into a file with the proper directory path
-    file_name2 = data_dir + r'/opinions/' + parent_directory + r'/' + file_number + r'.json'
-    with open(file_name2, 'w') as outfile2:
-        json.dumps(js2, outfile2, indent=4)
-
-    pass
+    opinion_url = cluster_dict['resource_uri'].replace('clusters', 'opinions')
+    opinion_dict = helper_functions.url_to_dict(opinion_url)
+    with open(data_dir + r'\opinions\%s\%s.json' % (parent_directory, file_number), 'w') as fp:
+        json.dump(opinion_dict, fp)
 
 
 #############
 # SCRIPTING
 #############
-
-site_dict_url = 'https://www.courtlistener.com/api/rest/v3/'
-site_dict = helper_functions.url_to_dict(site_dict_url)
-clusters_url = site_dict['clusters']
-opinions_url = site_dict['opinions']
+ids_and_parents = pull_cases_by_court('scotus')
+helper_functions.list_to_csv(data_dir + r'\scotus_ids.csv', ids_and_parents)

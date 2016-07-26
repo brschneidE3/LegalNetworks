@@ -1,20 +1,5 @@
 TO DO:
 
-    ## GITHUB ##
-    - MICHAEL: Create branch
-    - MICHAEL: Checkout branch and pull project and make edits below
-    - MICHAEL: Push to origin branch and make pull request
-    - Link to helpful Youtube video: https://www.youtube.com/watch?v=0fKg7e37bQE
-
-    ## helper_functions ##
-    - MICHAEL: Write subdir_exists
-    - MICHAEL: Write create_subdir
-
-    ## data_scraping ##
-    - MICHAEL: Write is_downloaded
-    - MICHAEL: Write download_case
-
-
     ## THEORY ##
     - IAIN: Look into Python graph-theory packages and decide if any of them are sufficiently similar to what we want
         -Do we want to start with a baseline package and then make our own addition?
