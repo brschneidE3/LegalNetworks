@@ -2,3 +2,4 @@
 .idea/*
 .idea/
 data/*.csv
+data/**/*.json
