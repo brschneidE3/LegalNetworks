@@ -6,16 +6,19 @@ import matplotlib.pyplot as plt
 import datetime
 from operator import itemgetter
 import numpy as np
+import os
 
+proj_cwd = os.path.dirname(os.getcwd())
+data_dir = proj_cwd + r'\data'
 
 ###############
 # BUILD A GRAPH
 ###############
 # Load data from the CSVs
-edgelist_data = helper_functions.csv_to_list(r'C:\Users\brendan\PycharmProjects\LegalNetworks\data\scotus',
+edgelist_data = helper_functions.csv_to_list(data_dir + r'\scotus',
                                              'citations_sublist.csv',
                                              1, 0)
-node_data = helper_functions.csv_to_list(r'C:\Users\brendan\PycharmProjects\LegalNetworks\data\scotus',
+node_data = helper_functions.csv_to_list(data_dir + r'\scotus',
                                          'consolidation.csv',
                                          1, 0)
 

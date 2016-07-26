@@ -3,6 +3,7 @@ __author__ = 'brsch'
 import os
 import download_data_batch
 import gzip
+import consolidate_data
 
 proj_cwd = os.path.dirname(os.getcwd())
 data_dir = proj_cwd + r'\data'
@@ -38,3 +39,7 @@ os.remove(destination_path)
 
 # 5) Download the .json's corresponding to each scotus decision
 download_data_batch.download_court_data('scotus', r'C:\Users\brsch\Downloads\curl-7.49.1-win64-mingw\bin\curl')
+
+# 6) Create citations_sublist.csv in the scotus directory
+master_citer_as_key, master_cited_as_key = consolidate_data.get_master_edge_dicts()
+consolidate_data.create_edge_sublist('scotus', master_cited_as_key)
