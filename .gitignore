@@ -1,4 +1,4 @@
 # pycharm folder
 .idea/*
 .idea/
-data/*
+data/*.csv
