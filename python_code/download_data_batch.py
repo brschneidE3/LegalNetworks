@@ -42,7 +42,9 @@ def download_court_data(court_name, curl_path):
     # Make a court data directory if we don't have one already
     if not os.path.exists(court_data_dir):
         os.makedirs(court_data_dir)
+    if not os.path.exists(court_clusters_data_dir):
         os.makedirs(court_clusters_data_dir)
+    if not os.path.exists(court_opinions_data_dir):
         os.makedirs(court_opinions_data_dir)
 
     ###################
