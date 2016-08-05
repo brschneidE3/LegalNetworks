@@ -1,4 +1,6 @@
-__author__ = 'michael
+from __future__ import division
+
+__author__ = 'michael'
 
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -7,7 +9,6 @@ import datetime
 from operator import itemgetter
 import numpy as np
 import calendar
-from __future__ import division
 import time
 
 def years_useable(graph_object):
