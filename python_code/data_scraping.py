@@ -10,7 +10,7 @@ import time
 import json
 
 proj_cwd = os.path.dirname(os.getcwd())
-data_dir = proj_cwd + r'\data'
+data_dir = proj_cwd + r'/data'
 
 # Unchanging courtlistener API info
 
@@ -47,7 +47,7 @@ def pull_cases_by_court(court_id):
     case_numbers_and_parent_directories = []
 
     # Make sure we already have subdirectories for this court. Create them if not.
-    subdirectories = [data_dir + r'\clusters\%s' % court_id, data_dir + r'\opinions\%s' % court_id]
+    subdirectories = [data_dir + r'/clusters/%s' % court_id, data_dir + r'/opinions/%s' % court_id]
     for subdir in subdirectories:
         if not os.path.isdir(subdir):
             os.makedirs(subdir)
@@ -121,14 +121,14 @@ def pull_cases_by_court(court_id):
 def is_downloaded(file_number, parent_directory):
     """
     Should check if corresponding cluster & opinion json files have been downloaded to appropriate path:
-        data_dir + r'\clusters\COURT NAME\FILE NUMBER.json
+        data_dir + r'/clusters/COURT NAME/FILE NUMBER.json
                             &
-        data_dir + r'\opinions\COURT NAME\FILE NUMBER.json
+        data_dir + r'/opinions/COURT NAME/FILE NUMBER.json
 
     Return True or False.
     """
-    op_downloaded = os.path.exists(data_dir + r'\opinions\%s\%s.json' % (file_number, parent_directory))
-    cl_downloaded = os.path.exists(data_dir + r'\clusters\%s\%s.json' % (file_number, parent_directory))
+    op_downloaded = os.path.exists(data_dir + r'/opinions/%s/%s.json' % (file_number, parent_directory))
+    cl_downloaded = os.path.exists(data_dir + r'/clusters/%s/%s.json' % (file_number, parent_directory))
     return op_downloaded and cl_downloaded
 
 
@@ -137,12 +137,12 @@ def download_case(cluster_dict, file_number, parent_directory):
     """
     Download opinion and cluster files if they are missing.
     """
-    with open(data_dir + r'\clusters\%s\%s.json' % (parent_directory, file_number), 'w') as fp:
+    with open(data_dir + r'/clusters/%s/%s.json' % (parent_directory, file_number), 'w') as fp:
         json.dump(cluster_dict, fp)
 
     opinion_url = cluster_dict['resource_uri'].replace('clusters', 'opinions')
     opinion_dict = helper_functions.url_to_dict(opinion_url)
-    with open(data_dir + r'\opinions\%s\%s.json' % (parent_directory, file_number), 'w') as fp:
+    with open(data_dir + r'/opinions/%s/%s.json' % (parent_directory, file_number), 'w') as fp:
         json.dump(opinion_dict, fp)
 
 
@@ -150,4 +150,4 @@ def download_case(cluster_dict, file_number, parent_directory):
 # SCRIPTING
 #############
 ids_and_parents = pull_cases_by_court('scotus')
-helper_functions.list_to_csv(data_dir + r'\scotus_ids.csv', ids_and_parents)
+helper_functions.list_to_csv(data_dir + r'/scotus_ids.csv', ids_and_parents)

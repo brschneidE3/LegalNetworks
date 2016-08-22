@@ -11,7 +11,7 @@ import datetime
 
 
 proj_cwd = os.path.dirname(os.getcwd())
-data_dir = proj_cwd + r'\data'
+data_dir = proj_cwd + r'/data'
 
 
 # def get_cases_in_jurisdiction(juris_abv='nced', file_type='opinions',
@@ -39,9 +39,9 @@ data_dir = proj_cwd + r'\data'
 
 def json_to_case(file_number, parent_dir):
 
-        file_suffix = r'%s\%s.json' % (parent_dir, file_number)
-        cl_file = data_dir + r'\clusters\%s' % file_suffix
-        op_file = data_dir + r'\opinions\%s' % file_suffix
+        file_suffix = r'%s/%s.json' % (parent_dir, file_number)
+        cl_file = data_dir + r'/clusters/%s' % file_suffix
+        op_file = data_dir + r'/opinions/%s' % file_suffix
 
         # Open the cluster and opinion json files
         with open(cl_file) as data_file:

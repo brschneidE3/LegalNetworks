@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import networkx as nx
 
 proj_cwd = os.path.dirname(os.getcwd())
-data_dir = proj_cwd + r'\data'
+data_dir = proj_cwd + r'/data'
 
 
 def consolidate(court_name):
@@ -26,10 +26,10 @@ def consolidate(court_name):
     A summary of all of this information is then exported to a CSV in the court parent directory.
     """
 
-    court_data_dir = data_dir + r'\%s' % court_name
-    cluster_cases = {case: None for case in os.listdir(court_data_dir + r'\clusters')}
+    court_data_dir = data_dir + r'/%s' % court_name
+    cluster_cases = {case: None for case in os.listdir(court_data_dir + r'/clusters')}
     num_clust = len(cluster_cases.keys())
-    opinion_cases = {case: None for case in os.listdir(court_data_dir + r'\opinions')}
+    opinion_cases = {case: None for case in os.listdir(court_data_dir + r'/opinions')}
     num_op = len(opinion_cases.keys())
     print '%s cluster files, %s opinion files detected.' % (num_clust, num_op)
 
@@ -46,7 +46,7 @@ def consolidate(court_name):
         else:
             has_opinion_file = False
 
-        cluster_file_data = helper_functions.json_to_dict(court_data_dir + r'\clusters\%s' % case)
+        cluster_file_data = helper_functions.json_to_dict(court_data_dir + r'/clusters/%s' % case)
 
         year, month, day = [int(element) for element in cluster_file_data['date_filed'].rsplit('-')]
         file_date = datetime.date(year=year, month=month, day=day)
@@ -76,7 +76,7 @@ def consolidate(court_name):
     consolidated_data = [['case_no', 'cluster_file', 'opinion_file', 'date', 'judges', 'citation_id']]
     for case in data.keys():
         consolidated_data.append(data[case])
-    helper_functions.list_to_csv(r'C:\Users\brendan\PycharmProjects\LegalNetworks\data\%s\consolidation.csv'
+    helper_functions.list_to_csv(r'C:/Users/brendan/PycharmProjects/LegalNetworks/data/%s/consolidation.csv'
                                  % court_name,
                                  consolidated_data)
 
@@ -87,7 +87,7 @@ def get_master_edge_dicts():
     and the values lists of the corresponding citation ids
     """
 
-    with open(data_dir + r'\citations.csv') as masterfile:
+    with open(data_dir + r'/citations.csv') as masterfile:
         csv_reader = csv.reader(masterfile)
         next(csv_reader)  # Skip header
 
@@ -124,7 +124,7 @@ def create_edge_sublist(court_name, master_cited_as_key):
     court_name's court.
     """
 
-    court_dir = data_dir + r'\%s' % court_name
+    court_dir = data_dir + r'/%s' % court_name
     court_data = helper_functions.csv_to_list(court_dir,
                                               'consolidation.csv', 1, 0)
 
@@ -151,7 +151,7 @@ def create_edge_sublist(court_name, master_cited_as_key):
         if id % 1000 == 0:
             print '%s of %s IDs checked (%s)' % (id, num_ids, float(id)/num_ids)
 
-    helper_functions.list_to_csv(court_dir + r'\citations_sublist.csv', edge_sublist)
+    helper_functions.list_to_csv(court_dir + r'/citations_sublist.csv', edge_sublist)
 
 # master_citer_as_key, master_cited_as_key = get_master_edge_dicts()
 # create_edge_sublist('scotus', master_cited_as_key)

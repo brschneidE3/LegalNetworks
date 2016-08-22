@@ -10,7 +10,7 @@ import helper_functions
 
 
 proj_cwd = os.path.dirname(os.getcwd())
-data_dir = proj_cwd + r'\data'
+data_dir = proj_cwd + r'/data'
 
 
 def create_jurisdiction_dict(directory):
@@ -134,3 +134,4 @@ class JurisdictionClass:
                   self.start_date, self.end_date, self.in_use)
 
 jurisdiction_dict = create_jurisdiction_dict(data_dir)
+/

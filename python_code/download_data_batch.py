@@ -5,7 +5,7 @@ import os
 import tarfile
 
 proj_cwd = os.path.dirname(os.getcwd())
-data_dir = proj_cwd + r'\data'
+data_dir = proj_cwd + r'/data'
 
 
 def download_url(url, destination_path, curl_path=r'C:/Users/brendan/Downloads/curl-7.38.0-win64/bin/curl'):
@@ -35,9 +35,9 @@ def download_court_data(court_name, curl_path):
         3) This process is then repeated for 'opinions'.
     """
 
-    court_data_dir = data_dir + r'\%s' % court_name
-    court_clusters_data_dir = court_data_dir + r'\clusters'
-    court_opinions_data_dir = court_data_dir + r'\opinions'
+    court_data_dir = data_dir + r'/%s' % court_name
+    court_clusters_data_dir = court_data_dir + r'/clusters'
+    court_opinions_data_dir = court_data_dir + r'/opinions'
 
     # Make a court data directory if we don't have one already
     if not os.path.exists(court_data_dir):
@@ -53,7 +53,7 @@ def download_court_data(court_name, curl_path):
     court_metadata_url = 'https://www.courtlistener.com/api/rest/v3/clusters/?docket__court=%s' % court_name
     court_metadata = helper_functions.url_to_dict(court_metadata_url)
     num_files_on_server = court_metadata['count']
-    files_in_dir = os.listdir(court_data_dir + r'\clusters')
+    files_in_dir = os.listdir(court_data_dir + r'/clusters')
     num_files_in_dir = len(files_in_dir)
 
     # If the number of files downloaded isn't the same as the number on the server
@@ -63,20 +63,20 @@ def download_court_data(court_name, curl_path):
         # Delete the files we currently have
         print '...deleting files...'
         for filename in files_in_dir:
-            os.remove(r'%s\%s' % (court_clusters_data_dir, filename))
+            os.remove(r'%s/%s' % (court_clusters_data_dir, filename))
 
         # Download the .tar.gz file
         print '...downloading new .tar.gz file...'
         download_url(url='https://www.courtlistener.com/api/bulk-data/clusters/%s.tar.gz' % court_name,
-                     destination_path=court_clusters_data_dir + r'\%s.tar.gz' % court_name,
+                     destination_path=court_clusters_data_dir + r'/%s.tar.gz' % court_name,
                      curl_path=curl_path)
 
         # Extract it
         print '...extracting files...'
-        with tarfile.open(court_clusters_data_dir + r'\%s.tar.gz' % court_name) as TarFile:
+        with tarfile.open(court_clusters_data_dir + r'/%s.tar.gz' % court_name) as TarFile:
             TarFile.extractall(path=court_clusters_data_dir)
         # And delete .tar.gz file
-        os.remove(r'%s\%s.tar.gz' % (court_clusters_data_dir, court_name))
+        os.remove(r'%s/%s.tar.gz' % (court_clusters_data_dir, court_name))
 
         print '...done.'
 
@@ -89,7 +89,7 @@ def download_court_data(court_name, curl_path):
     court_metadata_url = 'https://www.courtlistener.com/api/rest/v3/opinions/?docket__court=%s' % court_name
     court_metadata = helper_functions.url_to_dict(court_metadata_url)
     num_files_on_server = court_metadata['count']
-    files_in_dir = os.listdir(court_data_dir + r'\opinions')
+    files_in_dir = os.listdir(court_data_dir + r'/opinions')
     num_files_in_dir = len(files_in_dir)
 
     # If the number of files downloaded isn't the same as the number on the server
@@ -99,20 +99,20 @@ def download_court_data(court_name, curl_path):
         # Delete the files we currently have
         print '...deleting files...'
         for filename in files_in_dir:
-            os.remove(r'%s\%s' % (court_opinions_data_dir, filename))
+            os.remove(r'%s/%s' % (court_opinions_data_dir, filename))
 
         # Download the .tar.gz file
         print '...downloading new .tar.gz file...'
         download_url(url='https://www.courtlistener.com/api/bulk-data/opinions/%s.tar.gz' % court_name,
-                     destination_path=court_opinions_data_dir + r'\%s.tar.gz' % court_name,
+                     destination_path=court_opinions_data_dir + r'/%s.tar.gz' % court_name,
                      curl_path=curl_path)
 
         # Extract it
         print '...extracting files...'
-        with tarfile.open(court_opinions_data_dir + r'\%s.tar.gz' % court_name) as TarFile:
+        with tarfile.open(court_opinions_data_dir + r'/%s.tar.gz' % court_name) as TarFile:
             TarFile.extractall(path=court_opinions_data_dir)
         # And delete .tar.gz file
-        os.remove(r'%s\%s.tar.gz' % (court_opinions_data_dir, court_name))
+        os.remove(r'%s/%s.tar.gz' % (court_opinions_data_dir, court_name))
 
         print '...done.'
 

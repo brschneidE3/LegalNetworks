@@ -37,10 +37,10 @@ def url_to_dict(url):
 
 def csv_to_list(directory, filename, has_header=0, want_header=0):
 
-    if directory[-1] == '\\' or filename[0] == '\\':
+    if directory[-1] == '/' or filename[0] == '/':
         pass
     else:
-        directory += '\\'
+        directory += '/'
     the_file = open(directory + filename)
     filelist = list(the_file)
     the_file.close()
@@ -194,10 +194,10 @@ def add_row_to_csv(directory, filename, row, columns_to_skip):
 
 def add_version_to_filename(directory, filename):
 
-    if directory[-1] == '\\':
+    if directory[-1] == '/':
         pass
     else:
-        directory += '\\'
+        directory += '/'
     file_name = directory + filename
     counter = 1
     file_name_parts = os.path.splitext(file_name)  # returns ('/path/file', '.ext')
