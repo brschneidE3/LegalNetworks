@@ -76,7 +76,7 @@ def consolidate(court_name):
     consolidated_data = [['case_no', 'cluster_file', 'opinion_file', 'date', 'judges', 'citation_id']]
     for case in data.keys():
         consolidated_data.append(data[case])
-    helper_functions.list_to_csv(r'C:/Users/brendan/PycharmProjects/LegalNetworks/data/%s/consolidation.csv'
+    helper_functions.list_to_csv(data_dir + '/%s/consolidation.csv'
                                  % court_name,
                                  consolidated_data)
 
