@@ -6,6 +6,7 @@ import csv
 import datetime
 import matplotlib.pyplot as plt
 import networkx as nx
+import operator
 
 proj_cwd = os.path.dirname(os.getcwd())
 data_dir = proj_cwd + r'\data'
@@ -54,10 +55,23 @@ def consolidate(court_name):
         judges = cluster_file_data['judges']
         citation_id = "" if cluster_file_data['citation_id'] is None \
             else int(cluster_file_data['citation_id'])
+        try:
+            reporter_num = cluster_file_data['federal_cite_one']
+        except KeyError:
+            reporter_num = ''
 
+        # OPPORTUNITY FOR FURTHER FILTERING HERE
+        if has_opinion_file is True:
+            opinion_file_data = helper_functions.json_to_dict(court_data_dir + r'\opinions\%s' % case)
+            is_clean = check_if_clean(opinion_file_data)
+        else:
+            is_clean = True
+
+        # SAVE ROW IN CONSOLIDATION.CSV
         data[case_number] = [str(case_number), has_cluster_file, has_opinion_file,
-                             '%s/%s/%s' % (file_date.month, file_date.day, file_date.year),
-                             judges, citation_id]
+                             '%s/%s/%s' % (file_date.month, file_date.day, file_date.year), judges, citation_id,
+                             reporter_num,
+                             is_clean]
 
         clust_checked += 1
         if clust_checked % 100 == 0:
@@ -67,16 +81,20 @@ def consolidate(court_name):
     op_checked = 0
     for case in opinion_cases.keys()[:5]:
         case_number = case.rsplit('.')[0]  # Drop '.json'
-        data[case_number] = [case_number, False, True, "", "", ""]
+        opinion_file_data = helper_functions.json_to_dict(court_data_dir + r'\opinions\%s' % case)
+        is_clean = check_if_clean(opinion_file_data)
+        # Create what will be a row in consolidation.csv
+        data[case_number] = [case_number, False, True, "", "", "", "", is_clean]
 
         op_checked += 1
-        if op_checked % 100 == 0:
+        if op_checked % 1000 == 0:
             print '...%s of %s opinions consolidated...' % (op_checked, num_op)
 
-    consolidated_data = [['case_no', 'cluster_file', 'opinion_file', 'date', 'judges', 'citation_id']]
+    consolidated_data = [['case_no', 'cluster_file', 'opinion_file', 'date', 'judges', 'citation_id', 'reporter_number',
+                          'is_clean']]
     for case in data.keys():
         consolidated_data.append(data[case])
-    helper_functions.list_to_csv(r'C:\Users\brendan\PycharmProjects\LegalNetworks\data\%s\consolidation.csv'
+    helper_functions.list_to_csv(data_dir + r'\%s\consolidation_test.csv'
                                  % court_name,
                                  consolidated_data)
 
@@ -131,8 +149,10 @@ def create_edge_sublist(court_name, master_cited_as_key):
     print 'finding IDs in court...'
     citation_ids_in_court = []
     for row in court_data:
-        opinion_id = int(row[0])
-        citation_ids_in_court.append(opinion_id)
+        is_clean = row[-1] == 'TRUE'
+        if is_clean:
+            opinion_id = int(row[0])
+            citation_ids_in_court.append(opinion_id)
 
     edge_sublist = [['citing_opinion_id', 'cited_opinion_id']]
     num_ids = len(citation_ids_in_court)
@@ -153,5 +173,83 @@ def create_edge_sublist(court_name, master_cited_as_key):
 
     helper_functions.list_to_csv(court_dir + r'\citations_sublist.csv', edge_sublist)
 
+
+def master_text_dict(court_name):
+    court_data_dir = data_dir + r'\%s' % court_name
+    opinion_cases = {case: None for case in os.listdir(court_data_dir + r'\opinions')}
+    num_op = len(opinion_cases.keys())
+
+    master_data = {}
+    op_checked = 0
+    for case in opinion_cases.keys():
+
+        # OPPORTUNITY FOR FURTHER FILTERING HERE
+        opinion_file_data = helper_functions.json_to_dict(court_data_dir + r'\opinions\%s' % case)
+        is_clean = check_if_clean(opinion_file_data)
+
+        # SAVE ROW IN CONSOLIDATION.CSV
+        list_of_words = []
+        for key in opinion_file_data:
+            value = opinion_file_data[key]
+            if type(value) is unicode:
+                for word in value.rsplit(' '):
+                    if '<' in word or '>' in word:
+                        pass
+                    else:
+                        word.replace(',', '')
+                        list_of_words.append(word)
+        word_hist_dict = make_word_hist_dict(list_of_words)
+        master_data = add_to_master_hist_dict(word_hist_dict, master_data)
+
+        op_checked += 1
+        if op_checked % 100 == 0:
+            print '...%s of %s opinions text analyzed...' % (op_checked, num_op)
+            # sorted_master = sorted(master_data.items(), key=operator.itemgetter(1), reverse=True)
+            # for top5 in sorted_master[:5]:
+            #     print top5
+
+    consolidated_data = [['word', 'count']]
+    sorted_master = sorted(master_data.items(), key=operator.itemgetter(1), reverse=True)[:]
+    for word, count in sorted_master:
+        consolidated_data.append([word, count])
+    helper_functions.list_to_csv(data_dir + r'\%s\text_histogram.csv'
+                                 % court_name,
+                                 consolidated_data)
+
+
+def make_word_hist_dict(l):
+    d = {}
+    for x in l:
+        if x in d:
+            d[x] += 1
+        else:
+            d[x] = 1
+    return d
+
+
+def add_to_master_hist_dict(d, master_d):
+    for x in d:
+        if x in master_d:
+            master_d[x] += d[x]
+        else:
+            master_d[x] = d[x]
+    return master_d
+
+
+def check_if_clean(opinion_file_data):
+    """
+    Function subject to change, used to determine is a case is a 'clean' court case or not. Currently, the opinion file
+    is checked for containing either 'denied' or 'certiorari'. If either of these are found, the case is deemed dirty.
+    Else, the case is deemed clean.
+    """
+    for key in opinion_file_data.keys():
+        value = opinion_file_data[key]
+        if type(value) is unicode:
+            if 'denied' in value or 'certiorari' in value:
+                return False
+    return True
+
 # master_citer_as_key, master_cited_as_key = get_master_edge_dicts()
 # create_edge_sublist('scotus', master_cited_as_key)
+
+master_text_dict('scotus')

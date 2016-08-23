@@ -15,6 +15,7 @@ import json
 username = 'unc_networks'
 password = 'UNCSTATS'
 
+
 def json_to_dict(json_path):
 
     with open(json_path) as data_file:
