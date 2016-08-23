@@ -134,7 +134,7 @@ def create_edge_sublist(court_name, master_cited_as_key):
         opinion_id = int(row[0])
         citation_ids_in_court.append(opinion_id)
 
-    edge_sublist = [['citing_opinion_id', 'cited_opinion_id']]
+    edge_sublist = [['citing', 'cited']]
     num_ids = len(citation_ids_in_court)
     id = 0
     for opinion_id in citation_ids_in_court:
