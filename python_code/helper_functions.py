@@ -11,9 +11,35 @@ import csv
 import ast
 import requests
 import json
+import webbrowser
 
 username = 'unc_networks'
 password = 'UNCSTATS'
+
+def get_case_metadata(graph_object, case_number):
+    '''
+    given the CL id prints out the meta data i.e. the case name, date, etc
+    '''
+    # Note: case_number is int
+    print graph_object.node[case_number]
+
+def get_case_webpage(court_name, case_number):
+    '''
+    open url from CL website
+    '''
+    # Note: case_number is int; so convert to string
+    #       court_name should be string (court_name = jurisdiction i.e. 'scotus') ; refers to directory file
+    proj_cwd = os.path.dirname(os.getcwd())
+    data_dir = os.path.join(proj_cwd, 'data')
+    juris_dir = os.path.join(data_dir, court_name)
+    clusters_dir = os.path.join(juris_dir, 'clusters')
+    file_dir = os.path.join(clusters_dir, str(case_number) + r'.json')
+    with open(file_dir) as json_file:
+        js = json.load(json_file)
+    unicode_absolute_url = js['absolute_url'] # "/opinion/1722/shady-grove-orthopedic-associates-p-a-v-allstate-ins-co/"
+    string_absolute_url = unicode_absolute_url.encode('utf8')
+    case_webpage = "https://www.courtlistener.com" + string_absolute_url
+    webbrowser.open(case_webpage)
 
 def json_to_dict(json_path):
 
@@ -33,7 +59,6 @@ def url_to_dict(url):
     html = html.replace('null', 'None')
     html_as_dict = ast.literal_eval(html)
     return html_as_dict
-
 
 def csv_to_list(directory, filename, has_header=0, want_header=0):
 
